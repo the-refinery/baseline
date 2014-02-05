@@ -20,8 +20,8 @@
 
 // Media query mixin
 
-@mixin respond-to($val, $query: min-width, $media: only screen) {
-  @media #{$media} and ($query: $val) {
+@mixin respond-to($breakpoint, $query: min-width, $media: only screen) {
+  @media #{$media} and ($query: $breakpoint) {
     @content
   }
 }
