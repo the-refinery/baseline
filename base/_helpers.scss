@@ -18,19 +18,6 @@
   word-wrap: break-word;
 }
 
-
-// Clearfix
-// -----------------------------------
-// Based on micro clearfix by @necolas
-
-%clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
 // Media query mixin
 
 @mixin respond-to($val, $query: min-width, $media: only screen) {
