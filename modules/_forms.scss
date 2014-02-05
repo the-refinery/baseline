@@ -9,7 +9,7 @@
     margin-bottom: ($condensed-whitespace / 2);
   }
 
-  input,
+  #{$all-text-inputs},
   textarea,
   select {
     margin-bottom: $default-whitespace;
