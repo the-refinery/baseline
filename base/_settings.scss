@@ -15,10 +15,11 @@ $condensed-whitespace: ($default-whitespace / 2);
 
 // Fonts
 
-$headline-font: "Helvetica Neue", Helvetica, Arial, sans-serif; // TODO: Default to Helvetica for now, to be changed later
-$sans-serif-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif-font: Georgia, Times, "Times New Roman", serif;
+$headline-font: $helvetica; // TODO: Default to Helvetica for now, to be changed later
+$sans-serif-font: $helvetica;
+$serif-font: $georgia;
+$code-font: $monospace;
 
 // Layout
 
-$l-max-width: 60em;
+$l-max-width: em(960);
