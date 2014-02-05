@@ -1,0 +1,21 @@
+// Form styles
+// -----------
+
+// Vertical form
+
+.form-vertical {
+  label {
+    display: block;
+    margin-bottom: ($condensed-whitespace / 2);
+  }
+
+  input,
+  textarea,
+  select {
+    margin-bottom: $default-whitespace;
+  }
+}
+
+.field {
+  margin-bottom: $default-whitespace;
+}
