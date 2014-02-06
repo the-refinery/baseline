@@ -4,15 +4,15 @@
 
 ## Modular CSS
 
-The style sheets have been structured with modularity in mind to make it easy to add new features and components while ensuring the code base is easy to maintain over time. The structure has borrowed a lot from [Jonathan Snook's SMACSS](http://smacss.com) (Scalable and Modular CSS) approach. The stylesheets are broken down into four main sections:
+The style sheets have been structured with modularity in mind to make it easy to add new features and components while ensuring the code base is easy to maintain over time. The structure has borrowed a lot from [Jonathan Snook's SMACSS](http://smacss.com) (Scalable and Modular CSS) approach and so the stylesheets are broken down into four main sections:
 
 ### Base
 
 **Base** styles are the foundation of the site. In this directory you will find the following:
 
-- `_base.scss` - Style sheet where the styles are applied to an element using the element selector
+- `_base.scss` - This style sheet contains the styles are applied directly to elements using an element selector
 - `_settings.scss` - This style sheet includes site-wide settings such as colors, fonts, widths, etc.
-- `_helpers.scss` - This is where you would place any Sass mixins, functions or extends that are not present in Bourbon
+- `_helpers.scss` - This is where you would place any Sass mixins, functions or extends (that are also not present in Bourbon)
 - `_content.scss` - This is where universal text and content styles reside
 
 ### Layout
@@ -24,11 +24,11 @@ The style sheets have been structured with modularity in mind to make it easy to
 
 ### Modules
 
-**Modules** are discrete components of the page, such as navigation, alert dialogs, buttons, etc. This section of the CSS is where you will most likely spend most of your time. Any new features, design elements, components will be added to this section.
+**Modules** are discrete components of the page, such as navigation, alert dialogs, buttons, etc. This section of the CSS is where you will most likely spend most of your time. Any new features or components will be added to this section.
 
 ### States
 
-**States**, State, as defined by SMACSS, augments and overrides all other styles. This section at the moment only contains styles that control the display state of an element such as whether or not is is hidden `.is-hidden` or is visible `.is-visible`. These can be expanded to also contain states such as whether an elment is expanded or collapsed, or if the element is in an error state.
+**States**, as defined by SMACSS, augment and override all other styles. At the moment, this group contains only styles that control the display state of an element, whether or not is is hidden `.is-hidden` or is visible `.is-visible`. These can be expanded to also contain states such as whether an elment is expanded or collapsed, or if the element is in an error state.
 
 ## Coding Styles
 
@@ -68,7 +68,7 @@ Here's good example:
 ```scss
 .widget {
   @include clearfix;
-  @extend .component; 
+  @extend %component; 
   border: 1px solid $border-color;
   background: $background-color;
 
@@ -84,7 +84,7 @@ Here's good example:
 
 ## BEM
 
-When creating new styles it's best to employ the BEM methodology.
+When creating new styles it is best to employ the BEM methodology.
 
 > BEM – meaning block, element, modifier – is a front-end naming methodology thought up by the guys at Yandex. It is a smart way of naming your CSS classes to give them more transparency and meaning to other developers. [Harry Roberts of CSS Wizardry](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 
