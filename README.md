@@ -35,6 +35,7 @@ The style sheets have been structured with modularity in mind to make it easy to
 **Baseline** follows a coding style, which when adhered to will help keep things consistent with multiple people contributing to the code base.
 
 - Use two spaces to indent
+- One selector per line
 - Each property and value pair gets its own line
 - Put spaces after `:` in property declarations
 - Put spaces before `{` in rule declarations
@@ -48,7 +49,8 @@ The style sheets have been structured with modularity in mind to make it easy to
 Here's a good example:
 
 ```css
-.selector {
+.selector,
+.another-selector {
   border: 1px solid #0f0;
   color: #000;
   background: rgba(0, 0, 0, 0.5);
