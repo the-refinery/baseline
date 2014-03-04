@@ -28,7 +28,7 @@ The style sheets have been structured with modularity in mind to make it easy to
 
 ### States
 
-**States**, as defined by SMACSS, augment and override all other styles. At the moment, this group contains only styles that control the display state of an element, whether or not is is hidden `.is-hidden` or is visible `.is-visible`. These can be expanded to also contain states such as whether an elment is expanded or collapsed, or if the element is in an error state.
+**States**, as defined by SMACSS, augment and override all other styles. At the moment, this group contains only styles that control the display state of an element, whether or not is is hidden `.is-hidden` or is visible `.is-visible`. These can be expanded to also contain states such as whether an element is expanded or collapsed, or if the element is in an error state.
 
 ## Coding Styles
 
@@ -39,7 +39,7 @@ The style sheets have been structured with modularity in mind to make it easy to
 - Each property and value pair gets its own line
 - Put spaces after `:` in property declarations
 - Put spaces before `{` in rule declarations
-- End all delcarations with a semicolon
+- End all declarations with a semicolon
 - Use hex color codes `#000` unless using rgba
 - Lowercase all hex values, e.g., `#fff` instead of `#FFF`
 - Use shorthand hex values where available, e.g., `#fff` instead of `#ffffff`
@@ -68,7 +68,7 @@ Here's good example:
 ```scss
 .widget {
   @include clearfix;
-  @extend %component; 
+  @extend %component;
   border: 1px solid $border-color;
   background: $background-color;
 
@@ -110,7 +110,7 @@ The resulting code would look like this:
   <p class="widget__body">…</p>
 </div>
 ```
-And with the modifer:
+And with the modifier:
 
 ```html
 <div class="widget widget--light">
