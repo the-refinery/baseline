@@ -3,8 +3,8 @@
 
 // Setup the variables with Bourbon's Flex Grid
 
-$fg-column: 91px;
-$fg-gutter: 28px;
+$fg-column: 60px;
+$fg-gutter: 20px;
 $fg-max-columns: 12;
 
 @mixin column($num) {
