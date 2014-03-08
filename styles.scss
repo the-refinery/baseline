@@ -8,16 +8,22 @@
 @import "base/base";
 @import "base/content";
 
-// Layout
+// LAYOUT
+// ------------------------------
 
 @import "layout/layout";
 @import "layout/grid";
 
-// Modules
+// MODULES
+// ------------------------------
 
 @import "modules/buttons";
+@import "modules/forms";
+@import "modules/tables";
 @import "modules/media";
+@import "modules/flex-media";
 
-// States
+// STATES
+// ------------------------------
 
 @import "states/display";
