@@ -21,6 +21,15 @@ a {
   }
 }
 
+// Base form styles
+
+#{$all-text-inputs},
+textarea {
+  border: 1px solid $default-border-color;
+  padding: 6px;
+  border-radius: 3px;
+}
+
 // Base table styles
 
 table {

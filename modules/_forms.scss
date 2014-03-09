@@ -16,6 +16,19 @@
   }
 }
 
-.field {
+.form-field {
   margin-bottom: $default-whitespace;
+}
+
+// Checkbox and radio buttons
+
+.input-checkbox,
+.input-radio {
+  padding-left: $default-whitespace;
+
+  input[type="checkbox"],
+  input[type="radio"]  {
+    float: left;
+    margin: 5px 0 0 (-$default-whitespace);
+  }
 }

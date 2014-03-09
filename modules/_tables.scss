@@ -1,5 +1,41 @@
 // TABLE STYLES
+// ------------
 
 .table {
+  margin-bottom: $default-whitespace;
   width: 100%;
+
+  thead {
+    border-bottom: 1px solid $default-border-color;
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $default-border-color;
+    }
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
+
+// Responsive tables
+
+.table-wrapper {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scrollable {
+  overflow: auto;
+  overflow-y: hidden;
 }
