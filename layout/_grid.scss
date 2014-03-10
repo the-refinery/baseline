@@ -7,38 +7,42 @@ $fg-column: 60px;
 $fg-gutter: 20px;
 $fg-max-columns: 12;
 
-@mixin column($num) {
-  .col-#{$num} {
-    float: left;
-    margin-left: flex-gutter();
-    width: flex-grid($num);
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &.col-centered {
-      float: none;
-      margin: 0 auto;
-
-      &:first-child {
-        margin-left: auto;
-      }
-    }
-
-    @media screen and (max-width: em(700)) {
-      float: none;
-      margin-left: 0;
-      width: 100%;
-    }
-  }
-}
+// Construct the grid
 
 .row {
-  width: 100%;
   @include clearfix;
 }
 
+%col-base {
+  float: left;
+  margin-left: flex-gutter();
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &.col-centered {
+    float: none;
+    margin: 0 auto;
+
+    &:first-child {
+      margin-left: auto;
+    }
+  }
+
+  @media screen and (max-width: em(700)) {
+    float: none;
+    margin-left: 0;
+  }
+}
+
 @for $i from 1 to $fg-max-columns + 1 {
-  @include column($i);
+  .col-#{$i} {
+    @extend %col-base;
+    width: flex-grid($i);
+
+    @media screen and (max-width: em(700)) {
+      width: 100%;
+    }
+  }
 }
