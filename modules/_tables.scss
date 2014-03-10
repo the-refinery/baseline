@@ -30,7 +30,7 @@
 .table-wrapper {
   position: relative;
   overflow: hidden;
-  margin-bottom: 10px;
+  margin-bottom: $condensed-whitespace;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }

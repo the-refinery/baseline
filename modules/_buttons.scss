@@ -29,11 +29,6 @@
   &.is-disabled {
     cursor: default;
   }
-
-  &::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
 }
 
 // Button modifiers
