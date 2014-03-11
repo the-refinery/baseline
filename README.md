@@ -102,7 +102,38 @@ If the widget module contains any custom element styles such as headings they ca
 
 If there are any modifications to the original widget such as a lighter background color, you can add a modifier to the root class which uses two dashes to signify its relationship: `widget--light`.
 
-The resulting code would look like this:
+An example in `CSS` and `SCSS` *(Sass <= 3.2.15)*:
+
+```scss
+.widget {
+}
+
+.widget__title {
+}
+
+.widget__body {
+}
+
+.widget--light {
+}
+```
+
+An example in `SCSS` *(Sass 3.3)*:
+
+```scss
+.widget {
+  &__title {
+  }
+
+  &__body {
+  }
+
+  &--light {
+  }
+}
+```
+
+The resulting `HTML` would look like this:
 
 ```html
 <div class="widget">
