@@ -1,26 +1,44 @@
-// SITE-WIDE SETTINGS
+// COLORS
 // ------------------
 
-// Colors
+// Default colors
 
 $default-text-color: #333;
 $default-border-color: #ccc;
+
+// Link colors
+
 $link-color: #3476af;
 $link-disabled: #dedede;
 
-// Content defaults
+// Button colors
+
+$button-text-color: #333;
+$button-default: #fff;
+
+// Notification colors
+
+$notification-alert: #ebccd1;
+$notification-warning: #faebcc;
+$notification-success: #d6e9c6;
+$notification-notice: #bce8f1;
+
+// CONTENT DEFAULTS
+// ------------------
 
 $default-whitespace: 20px;
 $default-leading: 1.6;
 $condensed-whitespace: ($default-whitespace / 2);
 
-// Fonts
+// FONTS
+// ------------------
 
 $headline-font: $helvetica; // TODO: Default to Helvetica for now, to be changed later
 $sans-serif-font: $helvetica;
 $serif-font: $georgia;
 $code-font: $monospace;
 
-// Layout
+// LAYOUT
+// ------------------
 
 $l-max-width: em(960);

@@ -2,23 +2,25 @@
 // -------------------------
 // Ported from @stubbornella
 
-.media,
-.media__body {
+.media {
   overflow: hidden;
-}
 
-.media__obj {
-  float: left;
-  margin-right: $condensed-whitespace;
-  display: block;
-}
+  &__body {
+    overflow: hidden;
+  }
 
-.media__obj--rev {
-  float: right;
-  margin-left: $condensed-whitespace;
-  display: block;
-}
+  &__obj {
+    float: left;
+    margin-right: $condensed-whitespace;
+    display: block;
 
-.media__heading {
-  margin-top: 0 0 5px 0;
+    &--rev {
+      float: right;
+      margin-left: $condensed-whitespace;
+    }
+  }
+
+  &__heading {
+    margin-top: 0 0 5px 0;
+  }
 }

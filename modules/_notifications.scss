@@ -1,0 +1,30 @@
+// NOTIFICATION STYLES
+// -------------------
+
+.notification {
+  padding: $default-whitespace;
+  margin-bottom: $default-whitespace;
+  border: 1px solid;
+  border-radius: 4px;
+
+  &__title {
+    margin: 0 0 $condensed-whitespace 0;
+    font-size: em(20);
+  }
+
+  &--alert {
+    @include notification-colors($notification-alert);
+  }
+
+  &--warning {
+    @include notification-colors($notification-warning);
+  }
+
+  &--success {
+    @include notification-colors($notification-success);
+  }
+
+  &--notice {
+    @include notification-colors($notification-notice);
+  }
+}

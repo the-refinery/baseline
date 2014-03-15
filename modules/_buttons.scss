@@ -13,15 +13,15 @@
   text-decoration: none;
   vertical-align: middle;
   white-space: nowrap;
-  color: $default-text-color;
-  background: #fff;
-  border: 1px solid #ddd;
+  color: $button-text-color;
+  background: $button-default;
+  border: 1px solid $default-border-color;
   border-radius: 3px;
   -webkit-appearance: none;
 
   &:hover,
   &:focus {
-    color: $default-text-color;
+    color: $button-text-color;
     text-decoration: none;
   }
 

@@ -26,3 +26,11 @@
     @content;
   }
 }
+
+// Notifications
+
+@mixin notification-colors($notification-color: $default-text-color) {
+  color: shade($notification-color, 50%);
+  background-color: tint($notification-color, 40%);
+  border-color: shade($notification-color, 20%);
+}
