@@ -23,6 +23,6 @@
 
 @mixin respond-to($breakpoint, $query: min-width, $media: only screen) {
   @media #{$media} and ($query: $breakpoint) {
-    @content
+    @content;
   }
 }
