@@ -29,13 +29,13 @@
   &.is-disabled {
     cursor: default;
   }
-}
 
-// Button modifiers
+  // Button modifiers
 
-.button--full {
-  display: block;
-  width: 100%;
+  &--full {
+    display: block;
+    width: 100%;
+  }
 }
 
 // Pseudo button
