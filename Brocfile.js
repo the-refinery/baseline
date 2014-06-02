@@ -17,10 +17,8 @@ var pickFiles = require('broccoli-static-compiler'),
     trees = [bourbon, normalize, source].concat(findBowerTrees()),
     sassAndLib = mergeTrees(trees, { overwrite: true }),
 
-    css = compileSass([sassAndLib], 'styles.scss', test + '/styles.css', {
+    css = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css', {
       bundleExec: true
     });
 
-    testCss = compileSass([test], 'test.scss', test + '/test.css');
-
-module.exports = mergeTrees([css, testCss, html]);
+module.exports = mergeTrees([css, html]);

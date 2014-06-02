@@ -1,4 +1,4 @@
-$fg-max-columns: 12;
+@import "styles";
 
 @for $i from 1 to $fg-max-columns + 1 {
   .col-#{$i} {
