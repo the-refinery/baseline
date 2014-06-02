@@ -46,3 +46,27 @@ $fg-max-columns: 12;
     }
   }
 }
+
+@function push($amount, $firstChild) {
+  $ng: 2;
+  @if $firstChild { $ng: 1 }
+  @return flex-grid($amount) + ($ng * flex-gutter());
+}
+
+@for $i from 1 through $fg-max-columns {
+  .push-#{$i} {
+    margin-left: push($i, false);
+
+    &:first-child {
+      margin-left: push($i, true);
+
+      @media screen and (max-width: em(700)) {
+        margin-left: 0;
+      }
+    }
+
+    @media screen and (max-width: em(700)) {
+      margin-left: 0;
+    }
+  }
+}

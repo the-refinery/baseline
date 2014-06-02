@@ -2,8 +2,32 @@
 
 @for $i from 1 to $fg-max-columns + 1 {
   .col-#{$i} {
-    $lightness: 8% * $i;
-    $color: hsl(120, 100%, $lightness);
+    $hugh: 360 / $fg-max-columns * $i;
+    $color: hsl($hugh, 100%, 70%);
     background-color: $color;
+  }
+}
+
+#grid-test {
+  position: relative;
+  overflow-y: hidden;
+}
+
+#grid-fg {
+  position: relative;
+  z-index: 5;
+}
+
+#grid-bg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-height: 100%;
+  opacity: 0.3;
+
+  [class^="col-"] {
+    height: 10000px;
   }
 }
