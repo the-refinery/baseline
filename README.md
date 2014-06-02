@@ -149,3 +149,22 @@ And with the modifier:
   <p class="widget__body">…</p>
 </div>
 ```
+
+## Development
+
+You'll need Node + npm and Bower, if you don't already have them:
+
+    $ brew install node
+    $ npm install -g bower
+
+You'll also need the Broccoli cli:
+
+    $ npm install -g broccoli-cli
+
+Next install development dependencies:
+
+    $ npm install && bower install
+
+And finally:
+
+    $ broccoli serve
