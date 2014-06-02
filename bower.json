@@ -1,0 +1,6 @@
+{
+  "name": "Baseline",
+  "dependencies": {
+    "bourbon": "latest"
+  }
+}

@@ -1,0 +1,9 @@
+$fg-max-columns: 12;
+
+@for $i from 1 to $fg-max-columns + 1 {
+  .col-#{$i} {
+    $lightness: 8% * $i;
+    $color: hsl(120, 100%, $lightness);
+    background-color: $color;
+  }
+}

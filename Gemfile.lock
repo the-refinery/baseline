@@ -1,0 +1,9 @@
+GEM
+  specs:
+    sass (3.3.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  sass
