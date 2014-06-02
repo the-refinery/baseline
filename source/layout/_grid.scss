@@ -36,7 +36,7 @@ $fg-max-columns: 12;
   }
 }
 
-@for $i from 1 to $fg-max-columns + 1 {
+@for $i from 1 through $fg-max-columns {
   .col-#{$i} {
     @extend %col-base;
     width: flex-grid($i);
