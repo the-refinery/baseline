@@ -1,8 +1,10 @@
+// 3RD PARTY
+// ------------------------------
+@import "bourbon";
+@import "normalize";
+
 // BASE
 // ------------------------------
-
-// @import "Add path to Bourbon";
-@import "base/normalize";
 @import "base/settings";
 @import "base/helpers";
 @import "base/base";
