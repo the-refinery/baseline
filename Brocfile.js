@@ -5,6 +5,7 @@ var pickFiles = require('broccoli-static-compiler'),
 
     source = 'source',
     test = 'test',
+    docs = 'docs',
     bourbon = 'bower_components/bourbon/dist',
     normalize = 'bower_components/normalize-scss',
 
@@ -14,6 +15,12 @@ var pickFiles = require('broccoli-static-compiler'),
       destDir: test
     }),
 
+    docsHtml = pickFiles(docs, {
+      srcDir: '/',
+      files: ['**/*.html'],
+      destDir: docs
+    }),
+
     trees = [bourbon, normalize, source].concat(findBowerTrees()),
     sassAndLib = mergeTrees(trees, { overwrite: true }),
 
@@ -21,4 +28,4 @@ var pickFiles = require('broccoli-static-compiler'),
       bundleExec: true
     });
 
-module.exports = mergeTrees([css, html]);
+module.exports = mergeTrees([css, html, docsHtml]);
