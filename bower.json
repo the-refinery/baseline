@@ -1,6 +1,7 @@
 {
   "name": "Baseline",
   "dependencies": {
-    "bourbon": "latest"
+    "bourbon": "latest",
+    "normalize-scss": "latest"
   }
 }
