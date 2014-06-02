@@ -2,8 +2,8 @@
 
 @for $i from 1 to $fg-max-columns + 1 {
   .col-#{$i} {
-    $hugh: 360 / $fg-max-columns * $i;
-    $color: hsl($hugh, 100%, 70%);
+    $hue: 360 / $fg-max-columns * $i;
+    $color: hsl($hue, 100%, 70%);
     background-color: $color;
   }
 }
