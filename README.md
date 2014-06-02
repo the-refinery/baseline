@@ -163,7 +163,7 @@ You'll also need the Broccoli cli:
 
 Next install development dependencies:
 
-    $ npm install && bower install
+    $ npm install && bower install && bundle install
 
 And finally:
 
