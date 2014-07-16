@@ -33,6 +33,13 @@ var pickFiles = require('broccoli-static-compiler'),
     docsHtml = MarkdownPages(docsHtml, pagesOptions);
     docsHtml = HBSPages(docsHtml, pagesOptions);
 
+    var prism = 'bower_components/prism';
+    prism = pickFiles(prism, {
+      srcDir: '/',
+      files: ['prism.js', 'themes/*.css'],
+      destDir: '/prism'
+    });
+
     var trees = [bourbon, normalize, source],
         sassAndLib = mergeTrees(trees, { overwrite: true }),
         testCss = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css', {
@@ -42,4 +49,4 @@ var pickFiles = require('broccoli-static-compiler'),
           bundleExec: true
         });
 
-module.exports = mergeTrees([testCss, testHtml, docsCSS, docsHtml]);
+module.exports = mergeTrees([testCss, testHtml, docsCSS, docsHtml, prism]);

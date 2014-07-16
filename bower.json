@@ -2,6 +2,7 @@
   "name": "Baseline",
   "dependencies": {
     "bourbon": "latest",
-    "normalize-scss": "latest"
+    "normalize-scss": "latest",
+    "prism": "gh-pages"
   }
 }
