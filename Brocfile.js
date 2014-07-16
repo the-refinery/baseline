@@ -38,7 +38,7 @@ var pickFiles = require('broccoli-static-compiler'),
         testCss = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css', {
           bundleExec: true
         }),
-        docsCSS = compileSass([sassAndLib, docs], 'docs.scss', docs + '/styles.css', {
+        docsCSS = compileSass([sassAndLib, docs], 'docs.scss', '/styles.css', {
           bundleExec: true
         });
 
