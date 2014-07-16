@@ -4,7 +4,6 @@
   "dependencies": {},
   "devDependencies": {
     "broccoli": "^0.12.2",
-    "broccoli-bower": "^0.2.1",
     "broccoli-merge-trees": "^0.1.4",
     "broccoli-ruby-sass": "^0.1.0",
     "broccoli-static-compiler": "^0.1.4"

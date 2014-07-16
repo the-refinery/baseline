@@ -1,5 +1,4 @@
 var pickFiles = require('broccoli-static-compiler'),
-    findBowerTrees = require('broccoli-bower'),
     compileSass = require('broccoli-ruby-sass'),
     mergeTrees = require('broccoli-merge-trees'),
 
@@ -9,7 +8,7 @@ var pickFiles = require('broccoli-static-compiler'),
     bourbon = 'bower_components/bourbon/dist',
     normalize = 'bower_components/normalize-scss',
 
-    html = pickFiles(test, {
+    testHtml = pickFiles(test, {
       srcDir: '/',
       files: ['**/*.html'],
       destDir: test
@@ -21,11 +20,15 @@ var pickFiles = require('broccoli-static-compiler'),
       destDir: docs
     }),
 
-    trees = [bourbon, normalize, source].concat(findBowerTrees()),
+    trees = [bourbon, normalize, source],
     sassAndLib = mergeTrees(trees, { overwrite: true }),
 
-    css = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css', {
+    testCss = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css', {
       bundleExec: true
     });
 
-module.exports = mergeTrees([css, html, docsHtml]);
+    docsCSS = compileSass([sassAndLib, docs], 'docs.scss', docs + '/styles.css', {
+      bundleExec: true
+    });
+
+module.exports = mergeTrees([testCss, testHtml, docsCSS, docsHtml]);
