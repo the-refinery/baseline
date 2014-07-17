@@ -1,1 +1,33 @@
 @import "styles";
+
+.highlight {
+  padding: em(20);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.table--demo {
+  margin-bottom: 0;
+
+  tr {
+    border-bottom: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  td {
+    padding: em(10);
+  }
+}
+
+.table--demo {
+  [class*="headline"] {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border-bottom: 0;
+  }
+}

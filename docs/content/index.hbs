@@ -3,11 +3,13 @@ title: Test Docs
 template: default.hbs
 ---
 
-<div class="l-container">
-  <h1 class="primary-headline">Test Docs</h1>
-  {{#code-block 'markup'}}
-    <div class="brad">
-      Poop
-    </div>
-  {{/code-block}}
-</div>
+<h2 class="secondary-headline">Overview</h2>
+<p><strong>Baseline</strong> is a jumping-off point for authoring styles on SCSS-based projects.</p>
+
+<h2 class="secondary-headline">CSS</h2>
+
+{{#code-block 'css'}}
+  .base {
+    @include clearfix;
+  }
+{{/code-block}}
