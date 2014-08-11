@@ -1,5 +1,16 @@
 @import "styles";
 
+$default-bg-color: #f5f2f0;
+
+.code {
+  padding: 2px 5px;
+  font-family: $monospace;
+  color: #905;
+  background-color: $default-bg-color;
+  border: 1px solid $default-border-color;
+  border-radius: 2px;
+}
+
 .main {
   margin-bottom: ($default-whitespace * 2);
 }
@@ -18,16 +29,42 @@
 
   & + pre[class*="language-"] {
     margin-top: 0;
-    margin-bottom: $default-whitespace;
-    border: 1px solid #ccc;
     border-top: 0;
     border-radius: 0 0 6px 6px;
   }
 }
 
-pre {
+pre[class*="language-"] {
+  position: relative;
+  margin-bottom: $default-whitespace !important;
+  border: 1px solid $default-border-color;
   border-radius: 6px;
+
+  &:after {
+    content: "code";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-family: $sans-serif-font;
+    font-size: rem(12);
+    color: #999;
+    background: #fff;
+    border: 1px solid $default-border-color;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0 0 0 6px;
+  }
 }
+
+@each $code-type in css, markup, javascript {
+  pre[class*="#{$code-type}"] {
+    &:after {
+      content: "#{$code-type}";
+    }
+  }
+} 
 
 .table--demo {
   margin-bottom: 0;
@@ -57,7 +94,8 @@ pre {
 // Documentation nav
 
 .nav-doc {
-  margin: 0;
+  @include clearfix;
+  margin: 0 0 $default-whitespace;
   padding: 0;
 
   > li {
@@ -68,13 +106,13 @@ pre {
       padding: 5px 10px;
       text-align: center;
       text-decoration: none;
-      background-color: #eee;
+      background-color: $default-bg-color;
       border-bottom: 1px solid #fff;
 
       &:hover,
       &:focus,
       &.active {
-        background-color: darken(#eee, 10%);
+        background-color: darken($default-bg-color, 10%);
       }
     }
 
@@ -89,5 +127,46 @@ pre {
         border-radius: 0 0 6px 6px;
       }
     }
+  }
+
+  @media only screen and (min-width: em(450)) and (max-width: em(700)) {
+    > li {
+      float: left;
+      width: (100% / 4);
+
+      a {
+        border-left: 1px solid #fff;
+        border-bottom: 0;
+      }
+
+      &:first-child {
+        a {
+          border-left: 0;
+          border-radius: 6px 0 0 6px;
+        }
+      }
+
+      &:last-child {
+        a {
+          border-radius: 0 6px 6px 0;
+        }
+      }
+    }
+  }
+}
+
+// Grid example
+
+.grid-demo {
+  text-align: center;
+
+  .row {
+    margin-bottom: $default-whitespace;
+  }
+
+  [class*="col"] {
+    padding: 8px 0;
+    background-color: $default-bg-color;
+    outline: 1px solid $default-border-color;
   }
 }
