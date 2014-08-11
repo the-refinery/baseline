@@ -3,11 +3,17 @@
   {{>doc-head}}
   <body>
     {{>header}}
-    {{>navigation}}
 
     <main class="main" role="main">
       <div class="l-container">
-      {{{html}}}
+        <div class="row">
+          <div class="col-2">
+            {{>navigation}}
+          </div>
+          <div class="col-10">
+            {{{html}}}
+          </div>
+        </div>
       </div>
     </main>
 

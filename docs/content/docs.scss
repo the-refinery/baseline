@@ -53,3 +53,41 @@ pre {
     border-bottom: 0;
   }
 }
+
+// Documentation nav
+
+.nav-doc {
+  margin: 0;
+  padding: 0;
+
+  > li {
+    list-style: none;
+
+    a {
+      display: block;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #eee;
+      border-bottom: 1px solid #fff;
+
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: darken(#eee, 10%);
+      }
+    }
+
+    &:first-child {
+      a {
+        border-radius: 6px 6px 0 0;
+      }
+    }
+
+    &:last-child {
+      a {
+        border-radius: 0 0 6px 6px;
+      }
+    }
+  }
+}
