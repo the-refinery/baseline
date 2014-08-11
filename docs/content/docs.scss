@@ -1,9 +1,31 @@
 @import "styles";
 
+.main {
+  margin-bottom: ($default-whitespace * 2);
+}
+
 .highlight {
-  padding: em(20);
+  margin-bottom: $default-whitespace;
+  padding: 1em;
   background-color: #fff;
   border: 1px solid #ccc;
+  border-radius: 6px;
+
+  &--flush {
+    margin-bottom: 0;
+    border-radius: 6px 6px 0 0;
+  }
+
+  & + pre[class*="language-"] {
+    margin-top: 0;
+    margin-bottom: $default-whitespace;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-radius: 0 0 6px 6px;
+  }
+}
+
+pre {
   border-radius: 6px;
 }
 

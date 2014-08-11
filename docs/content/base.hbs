@@ -7,7 +7,7 @@ template: default.hbs
 
 <h3 class="tertiary-headline">Headlines</h3>
 
-<div class="highlight">
+<div class="highlight highlight--flush">
   <table class="table table--demo">
     <tbody>
       <tr>
@@ -23,8 +23,34 @@ template: default.hbs
   </table>
 </div>
 
-{{#code-block 'markup'}}
-<h1 class="primary-headline">&hellip</h1>
-<h2 class="secondary-headline">&hellip</h2>
-<h3 class="tertiary-headline">&hellip</h3>
+{{#code-block 'markup'}}<h1 class="primary-headline">...</h1>
+<h2 class="secondary-headline">...</h2>
+<h3 class="tertiary-headline">...</h3>
+{{/code-block}}
+
+<h3 class="tertiary-headline">Text Utilities</h3>
+
+<div class="highlight highlight--flush">
+  <table class="table table--demo">
+    <tbody>
+      <tr>
+        <td class="txt-left">Left aligned text</td>
+      </tr>
+      <tr>
+        <td class="txt-center">Center aligned text</td>
+      </tr>
+      <tr>
+        <td class="txt-right">Right aligned text</td>
+      </tr>
+      <tr>
+        <td class="txt-justify"><strong>Justified text</strong> - Adipisicing maiores illum tempore quaerat perferendis, suscipit vel! Expedita quos nemo nihil similique laudantium doloribus. Vitae at inventore in eaque provident rem eum. Vero sapiente facere libero totam omnis totam.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{#code-block 'markup'}}<div class="txt-left">...</div>
+<div class="txt-center">...</div>
+<div class="txt-right">...</div>
+<div class="txt-justify">...</div>
 {{/code-block}}
