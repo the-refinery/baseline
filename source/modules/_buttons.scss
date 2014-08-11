@@ -21,8 +21,9 @@
 
   &:hover,
   &:focus {
-    color: $button-text-color;
     text-decoration: none;
+    color: $button-text-color;
+    background-color: darken($button-default, 10%);
   }
 
   &:disabled,
