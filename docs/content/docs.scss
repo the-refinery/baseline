@@ -54,11 +54,11 @@ pre[class*="language-"] {
     border: 1px solid $default-border-color;
     border-top: 0;
     border-right: 0;
-    border-radius: 0 0 0 6px;
+    border-radius: 0 6px 0 6px;
   }
 }
 
-@each $code-type in css, markup, javascript {
+@each $code-type in css, scss, markup, javascript {
   pre[class*="#{$code-type}"] {
     &:after {
       content: "#{$code-type}";

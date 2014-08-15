@@ -36,7 +36,7 @@ var pickFiles = require('broccoli-static-compiler'),
     var prism = 'bower_components/prism';
     prism = pickFiles(prism, {
       srcDir: '/',
-      files: ['prism.js', 'themes/*.css'],
+      files: ['prism.js', 'themes/*.css', 'components/prism-scss.js'],
       destDir: '/prism'
     });
 
