@@ -1,0 +1,139 @@
+---
+title: Code Styles
+template: default.hbs
+---
+
+<h1 class="primary-headline">Code Styles</h1>
+
+<h2 class="secondary-headline">Modular CSS</h2>
+
+<p>The style sheets have been structured with modularity in mind to make it easy to add new features and components while ensuring the code base is easy to maintain over time. The structure has borrowed a lot from <a href="http://snook.ca/">Jonathan Snook's</a> <a href="http://smacss.com/" title="Scalable and Modular CSS">SMACSS</a> (Scalable and Modular CSS) approach. The stylesheets are broken down into four main sections:</p>
+
+<h3 class="tertiary-headline">Base</h3>
+
+<p><strong>Base</strong> styles are the foundation of the site. In this directory you will find the following:</p>
+ 
+<div class="highlight">
+  <table class="table table--demo">
+    <tbody>
+      <tr>
+        <td><strong>External Files</strong></td>
+        <td>References to the mixin library, <a href="http://bourbon.io/">Bourbon</a>, <a href="http://necolas.github.io/normalize.css/">Normalize</a> which takes the place of a traditional reset.</td>
+      </tr>
+      <tr>
+        <td><code class="code">_base.scss</code></td>
+        <td>Style sheet where styles are applied to an element using the element selector.</td>
+      </tr>
+      <tr>
+        <td><code class="code">_settings.scss</code></td>
+        <td>This stylesheet includes site-wide the colors, fonts, etc.</td>
+      </tr>
+      <tr>
+        <td><code class="code">_helpers.scss</code></td>
+        <td>This is where you can place any Sass mixins, functions or extends that are outside the scope of Bourbon.</td>
+      </tr>
+      <tr>
+        <td><code class="code">_content.scss</code></td>
+        <td>This is where universal text and content styles reside.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="tertiary-headline">Layout</h3>
+
+<p>The layout styles are just that, they determine how main sections of the page are structured. Within this directory there are:</p>
+
+<div class="highlight">
+  <table class="table--demo">
+    <tbody>
+      <tr>
+        <td><code class="code">_layout.scss</code></td>
+        <td>This stylesheet is where the main container styles are stored such as <code class="code">.l-container</code>, <code class="code">header</code>, <code class="code">footer</code>, etc.</td>
+      </tr>
+      <tr>
+        <td><code class="code">_grid.scss</code></td>
+        <td>The grid, which is discussed in detail in the <a href="layout.html">layout</a> section of this guide can be changed to whatever is required by adjusting the variables at the top of the file. The calculations to build the grid are done through Sass.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="tertiary-headline">Modules</h3>
+
+<p>Modules are discrete components of the page, such as navigation, alert dialogs, the photo viewer, etc. This section of the CSS is where you will most likely spend most of your time. Any new features, design elements, components will be added to this section.</p>
+<p>We have tried to maintain a consistent pattern on how to structure new modules, although in some cases you may find you will have to break that pattern to get the results you need. It follows some of the concepts from <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a>.</p>
+<p>New modules get their own style sheet to keep them sequestered from the rest. This makes maintenance much easier, especially in a large code base with many contributors. Modules shoule be broken down in <code class="code">blocks</code> and <code class="code">modifiers</code>. Here is an example of a module we'll call 'widget':</p>
+<p>The main styles that control the widget will be attached to the root: <code class="code">widget</code>.</p>
+<p>If the widget module contains any custom element styles such as headings they can be scoped to the widget like this: <code class="code">widget-title</code> or <code class="code">widget-heading</code>.</p>
+<p>If there are any modifications to the original widget such as a lighter background color, you can add a modifier to the root class which uses two dashes to signify its relationship: <code class="code">widget--light</code></p>
+
+<p>The resulting code would look like this:</p>
+
+{{#code-block 'markup'}}<div class="widget">
+  <p class="widget-title">...</p>
+  <p class="widget-body">...</p>
+</div>
+{{/code-block}}
+
+<p>And with the modifier:</p>
+
+{{#code-block 'markup'}}<div class="widget widget--light">
+  <p class="widget-title">...</p>
+  <p class="widget-body">...</p>
+</div>
+{{/code-block}}
+
+<h3 class="tertiary-headline">States</h3>
+
+<p>State, as defined by SMACSS, augments and overrides all other styles. This section at the moment only contains styles that control the display state of an element such as whether or not is is hidden <code class="code">.is-hidden</code> or is visible <code class="code">.is-visible</code>. These can be expanded to also contain states such as whether an element is expanded or collapsed, or if the element is in an error state.</p>
+
+<h2 class="secondary-headline">Coding Styles</h2>
+
+<p>This section is optional, but when maintaining stylesheets for a large code base with multiple contributors, it helps to follow some basic guidelines to keep things consistent.</p>
+
+<h3>Coding Style</h3>
+
+<ul class="padded-list">
+  <li>Use two spaces to indent.</li>
+  <li>Each property and value pair gets its own line.</li>
+  <li>Put spaces after <code class="code">:</code> in property declarations.</li>
+  <li>Put spaces before <code class="code">{</code> in rule declarations.</li>
+  <li>Use hex color codes <code class="code">#000</code> unless using rgba.</li>
+  <li>Use <code class="code">//</code> for comment blocks (instead of <code class="code">/* */</code>).</li>
+</ul>
+
+<p>Here is good example syntax:</p>
+
+{{#code-block 'css'}}.styleguide-format {
+  border: 1px solid #0f0;
+  color: #000;
+  background: rgba(0,0,0,0.5);
+}
+{{/code-block}}
+
+<h3 class="tertiary-headline">SCSS Style</h3>
+
+<ul class="padded-list">
+  <li>Any <code class="code">$variable</code> or <code class="code">@mixin</code> that is used in more than one file should be put in the <code class="code">_settings.scss</code> or <code class="code">_helpers.scss</code> depending on their function.</li>
+  <li>Limit nesting as much as possible. Nesting too deep will lead to overly-specific selectors and make overriding them in the future problematic.</li>
+  <li>Always place <code class="code">@extend</code> and <code class="code">@include</code> statements on the first lines of a declaration block.</li>
+</ul>
+
+<p>Here is an example:</p>
+
+{{#code-block 'css'}}.widget {
+  @include clearfix;
+  @extend .component; 
+  border: 1px solid $border-color;
+  background: $background-color;
+
+  a {
+    color: $widget-link-color;
+
+    &:hover {
+      color: darken($widget-link-color, 10%):
+    }
+  }
+}
+{{/code-block}}
