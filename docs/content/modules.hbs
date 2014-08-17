@@ -5,7 +5,7 @@ template: default.hbs
 
 <h1 class="primary-headline">Module Styles</h1>
 
-<h2 class="tertiary-headline">Buttons</h2>
+<h2 class="secondary-headline">Buttons</h2>
 
 <div class="highlight highlight--flush">
   <span class="button mbl">Standard Button</span>
@@ -23,4 +23,40 @@ template: default.hbs
 
 {{#code-block 'markup'}}<span class="button">Standard Button</span>
 <span class="button-pseudo">Pseudo Button</span>
+{{/code-block}}
+
+<h2 class="secondary-headline">Lists</h2>
+
+<h3 class="tertiary-headline">Plain List</h3>
+
+<div class="highlight highlight--flush">
+  <ul class="list-plain mbn">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</div>
+
+{{#code-block 'markup'}}<ul class="list-plain">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+{{/code-block}}
+
+<h3 class="tertiary-headline">Horizontal List</h3>
+
+<div class="highlight highlight--flush">
+  <ul class="list-horizontal mbn">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+</div>
+
+{{#code-block 'markup'}}<ul class="list-horizontal">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
 {{/code-block}}
