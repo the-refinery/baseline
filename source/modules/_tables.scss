@@ -21,7 +21,28 @@
   }
 
   th {
+    text-align: left;
     font-weight: bold;
+  }
+
+  &--striped {
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background-color: #f3f3f3;
+        }
+      }
+    }
+  }
+
+  &--hover {
+    tbody {
+      tr {
+        &:hover {
+          background-color: #eee;
+        }
+      }
+    }
   }
 }
 

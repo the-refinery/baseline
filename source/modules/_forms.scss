@@ -1,6 +1,16 @@
 // FORM STYLES
 // -----------
 
+// Horizontal form
+
+.form-horizontal {
+  #{$all-text-inputs},
+  textarea,
+  select {
+    margin-right: $condensed-whitespace;
+  }
+}
+
 // Vertical form
 
 .form-vertical {
@@ -12,6 +22,7 @@
   #{$all-text-inputs},
   textarea,
   select {
+    display: block;
     margin-bottom: $default-whitespace;
   }
 }
