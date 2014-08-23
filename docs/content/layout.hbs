@@ -7,77 +7,81 @@ template: default.hbs
 
 <p>These are styles that drive the layout of the site. They are based on a 12 column grid with a width of <code class="code">960px</code>.</p>
 
-<h2 class="secondary-headline doc-headline">The Grid</h2>
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">The Grid</h2>
 
-<h3 class="tertiary-headline">Details</h3>
+  <h3 class="tertiary-headline">Details</h3>
 
-<ul>
-  <li>Columns <code class="code">col-*</code> must be wrapped in a container with a class of <code class="code">row</code></li>
-  <li>Use rows to create horizontal groups of columns.</li>
-  <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
-  <li>Predefined grid classes like <code class="code">.row</code> and <code class="code">.col-*</code> are available for quickly making grid layouts.</li>
-</ul>
+  <ul>
+    <li>Columns <code class="code">col-*</code> must be wrapped in a container with a class of <code class="code">row</code></li>
+    <li>Use rows to create horizontal groups of columns.</li>
+    <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+    <li>Predefined grid classes like <code class="code">.row</code> and <code class="code">.col-*</code> are available for quickly making grid layouts.</li>
+  </ul>
 
-<h3 class="tertiary-headline">Example</h3>
+  <h3 class="tertiary-headline">Example</h3>
 
-<div class="grid-demo">
-  <div class="row">
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
-    <div class="col-1">col-1</div>
+  <div class="grid-demo">
+    <div class="row">
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+      <div class="col-1">col-1</div>
+    </div>
+    <div class="row">
+      <div class="col-12">col-12</div>
+    </div>
+    <div class="row">
+      <div class="col-1">col-1</div>
+      <div class="col-11">col-11</div>
+    </div>
+    <div class="row">
+      <div class="col-2">col-2</div>
+      <div class="col-10">col-10</div>
+    </div>
+    <div class="row">
+      <div class="col-3">col-3</div>
+      <div class="col-9">col-9</div>
+    </div>
+    <div class="row">
+      <div class="col-4">col-4</div>
+      <div class="col-8">col-8</div>
+    </div>
+    <div class="row">
+      <div class="col-5">col-5</div>
+      <div class="col-7">col-7</div>
+    </div>
+    <div class="row">
+      <div class="col-6">col-6</div>
+      <div class="col-6">col-6</div>
+    </div>
+    <div class="row">
+      <div class="col-2">col-2</div>
+      <div class="col-4">col-4</div>
+      <div class="col-2">col-2</div>
+      <div class="col-4">col-4</div>
+    </div>
   </div>
-  <div class="row">
-    <div class="col-12">.col-12</div>
+
+  <h3 class="tertiary-headline">Code Sample</h3>
+
+  {{#code-block 'markup'}}<div class="row">
+    <div class="col-2">...</div>
+    <div class="col-4">...</div>
+    <div class="col-2">...</div>
+    <div class="col-4">...</div>
   </div>
-  <div class="row">
-    <div class="col-1">col-1</div>
-    <div class="col-11">col-11</div>
-  </div>
-  <div class="row">
-    <div class="col-2">col-2</div>
-    <div class="col-10">col-10</div>
-  </div>
-  <div class="row">
-    <div class="col-3">col-3</div>
-    <div class="col-9">col-9</div>
-  </div>
-  <div class="row">
-    <div class="col-4">col-4</div>
-    <div class="col-8">col-8</div>
-  </div>
-  <div class="row">
-    <div class="col-5">col-5</div>
-    <div class="col-7">col-7</div>
-  </div>
-  <div class="row">
-    <div class="col-6">col-6</div>
-    <div class="col-6">col-6</div>
-  </div>
-  <div class="row">
-    <div class="col-2">col-2</div>
-    <div class="col-4">col-4</div>
-    <div class="col-2">col-2</div>
-    <div class="col-4">col-4</div>
-  </div>
+  {{/code-block}}
 </div>
 
-<h3 class="tertiary-headline">Code Sample</h3>
-
-{{#code-block 'markup'}}<div class="row">
-  <div class="col-2">...</div>
-  <div class="col-4">...</div>
-  <div class="col-2">...</div>
-  <div class="col-4">...</div>
+<div class="doc-section">
+  <h3 class="tertiary-headline">Grid Offsets</h3>
 </div>
-{{/code-block}}
-
-<h3 class="tertiary-headline">Grid Offsets</h3>

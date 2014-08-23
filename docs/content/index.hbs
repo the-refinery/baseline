@@ -3,12 +3,14 @@ title: Test Docs
 template: default.hbs
 ---
 
-<h2 class="secondary-headline">Overview</h2>
+<h1 class="secondary-headline">Overview</h1>
 <p><strong>Baseline</strong> is a jumping-off point for authoring styles on SCSS-based projects.</p>
 
-<h2 class="secondary-headline doc-headline">CSS</h2>
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">CSS</h2>
 
-{{#code-block 'css'}}.base {
-  @include clearfix;
-}
-{{/code-block}}
+  {{#code-block 'css'}}.base {
+    @include clearfix;
+  }
+  {{/code-block}}
+</div>

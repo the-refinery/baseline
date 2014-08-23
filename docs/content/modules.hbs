@@ -5,320 +5,334 @@ template: default.hbs
 
 <h1 class="primary-headline">Module Styles</h1>
 
-<h2 class="secondary-headline doc-headline">Buttons</h2>
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">Buttons</h2>
 
-<div class="highlight highlight--flush">
-  <span class="button mbl">Standard Button</span>
+  <div class="highlight highlight--flush">
+    <span class="button mbl">Standard Button</span>
+    <span class="button button--full">Full Width Button</span>
+  </div>
+
+  {{#code-block 'markup'}}<span class="button">Standard Button</span>
   <span class="button button--full">Full Width Button</span>
-</div>
+  {{/code-block}}
 
-{{#code-block 'markup'}}<span class="button">Standard Button</span>
-<span class="button button--full">Full Width Button</span>
-{{/code-block}}
+  <div class="highlight highlight--flush">
+    <span class="button">Standard Button</span>
+    <span class="button-pseudo">Pseudo Button</span>
+  </div>
 
-<div class="highlight highlight--flush">
-  <span class="button">Standard Button</span>
+  {{#code-block 'markup'}}<span class="button">Standard Button</span>
   <span class="button-pseudo">Pseudo Button</span>
+  {{/code-block}}
 </div>
 
-{{#code-block 'markup'}}<span class="button">Standard Button</span>
-<span class="button-pseudo">Pseudo Button</span>
-{{/code-block}}
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">Flex Media</h2>
+  <p>Responsive styles for embedded media.</p>
 
-<h2 class="secondary-headline doc-headline">Flex Media</h2>
-<p>Responsive styles for embedded media.</p>
+  <h3 class="tertiary-headline">16x9 Aspect Ratio</h3>
 
-<h3 class="tertiary-headline">16x9 Aspect Ratio</h3>
-
-<div class="highlight highlight--flush">
-  <div class="flex-container flex-container--16x9">
-    <div class="flex__item">
-      <iframe width="420" height="315" src="//www.youtube.com/embed/anLfoy2XsFw" frameborder="0" allowfullscreen></iframe>
+  <div class="highlight highlight--flush">
+    <div class="flex-container flex-container--16x9">
+      <div class="flex__item">
+        <iframe width="420" height="315" src="//www.youtube.com/embed/anLfoy2XsFw" frameborder="0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
-</div>
 
-{{#code-block 'markup'}}<div class="flex-container flex-container--16x9">
-  <div class="flex__item">
-    ...
-  </div>
-</div>
-{{/code-block}}
-
-<h3 class="tertiary-headline">4x3 Aspect Ratio</h3>
-
-<div class="highlight highlight--flush">
-  <div class="flex-container flex-container--4x3">
+  {{#code-block 'markup'}}<div class="flex-container flex-container--16x9">
     <div class="flex__item">
-      <iframe width="420" height="315" src="//www.youtube.com/embed/anLfoy2XsFw" frameborder="0" allowfullscreen></iframe>
+      ...
     </div>
   </div>
+  {{/code-block}}
+
+  <h3 class="tertiary-headline">4x3 Aspect Ratio</h3>
+
+  <div class="highlight highlight--flush">
+    <div class="flex-container flex-container--4x3">
+      <div class="flex__item">
+        <iframe width="420" height="315" src="//www.youtube.com/embed/anLfoy2XsFw" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  {{#code-block 'markup'}}<div class="flex-container flex-container--4x3">
+    <div class="flex__item">
+      ...
+    </div>
+  </div>
+  {{/code-block}}
 </div>
 
-{{#code-block 'markup'}}<div class="flex-container flex-container--4x3">
-  <div class="flex__item">
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">Forms</h2>
+
+  <h3 class="tertiary-headline">Horizontal Form</h3>
+
+  <div class="highlight highlight--flush">
+    <div class="form-horizontal">
+      <label for="test-form-1">Name</label>
+      <input type="text" name="test-form-1" id="test-form-1">
+      <select id="test-form-2" name="test-form-2" id="test-form-2">
+        <option value="option-1">Option 1</option>
+        <option value="option-2">Option 2</option>
+        <option value="option-3">Option 3</option>
+        <option value="option-4">Option 4</option>
+      </select>
+      <button class="button" type="submit">Submit</button>
+    </div>
+  </div>
+
+  {{#code-block 'markup'}}<div class="form-horizontal">
     ...
   </div>
-</div>
-{{/code-block}}
+  {{/code-block}}
 
-<h2 class="secondary-headline doc-headline">Forms</h2>
+  <h3 class="tertiary-headline">Vertical Form</h3>
 
-<h3 class="tertiary-headline">Horizontal Form</h3>
-
-<div class="highlight highlight--flush">
-  <div class="form-horizontal">
-    <label for="test-form-1">Name</label>
-    <input type="text" name="test-form-1" id="test-form-1">
-    <select id="test-form-2" name="test-form-2" id="test-form-2">
-      <option value="option-1">Option 1</option>
-      <option value="option-2">Option 2</option>
-      <option value="option-3">Option 3</option>
-      <option value="option-4">Option 4</option>
-    </select>
-    <button class="button" type="submit">Submit</button>
+  <div class="highlight highlight--flush">
+    <div class="form-vertical">
+      <label for="test-form-1">Name</label>
+      <input type="text" name="test-form-1" id="test-form-1">
+      <select id="test-form-2" name="test-form-2" id="test-form-2">
+        <option value="option-1">Option 1</option>
+        <option value="option-2">Option 2</option>
+        <option value="option-3">Option 3</option>
+        <option value="option-4">Option 4</option>
+      </select>
+      <button class="button" type="submit">Submit</button>
+    </div>
   </div>
-</div>
 
-{{#code-block 'markup'}}<div class="form-horizontal">
-  ...
-</div>
-{{/code-block}}
-
-<h3 class="tertiary-headline">Vertical Form</h3>
-
-<div class="highlight highlight--flush">
-  <div class="form-vertical">
-    <label for="test-form-1">Name</label>
-    <input type="text" name="test-form-1" id="test-form-1">
-    <select id="test-form-2" name="test-form-2" id="test-form-2">
-      <option value="option-1">Option 1</option>
-      <option value="option-2">Option 2</option>
-      <option value="option-3">Option 3</option>
-      <option value="option-4">Option 4</option>
-    </select>
-    <button class="button" type="submit">Submit</button>
+  {{#code-block 'markup'}}<div class="form-vertical">
+    ...
   </div>
+  {{/code-block}}
 </div>
 
-{{#code-block 'markup'}}<div class="form-vertical">
-  ...
-</div>
-{{/code-block}}
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">Lists</h2>
 
-<h2 class="secondary-headline doc-headline">Lists</h2>
+  <h3 class="tertiary-headline">Plain List</h3>
 
-<h3 class="tertiary-headline">Plain List</h3>
+  <div class="highlight highlight--flush">
+    <ul class="list-plain mbn">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
 
-<div class="highlight highlight--flush">
-  <ul class="list-plain mbn">
+  {{#code-block 'markup'}}<ul class="list-plain">
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
   </ul>
-</div>
+  {{/code-block}}
 
-{{#code-block 'markup'}}<ul class="list-plain">
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-</ul>
-{{/code-block}}
+  <h3 class="tertiary-headline">Horizontal List</h3>
 
-<h3 class="tertiary-headline">Horizontal List</h3>
+  <div class="highlight highlight--flush">
+    <ul class="list-horizontal mbn">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
 
-<div class="highlight highlight--flush">
-  <ul class="list-horizontal mbn">
+  {{#code-block 'markup'}}<ul class="list-horizontal">
     <li>Item 1</li>
     <li>Item 2</li>
     <li>Item 3</li>
   </ul>
+  {{/code-block}}
 </div>
 
-{{#code-block 'markup'}}<ul class="list-horizontal">
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
-</ul>
-{{/code-block}}
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">Media Object</h2>
 
-<h2 class="secondary-headline doc-headline">Media Object</h2>
+  <h3 class="tertiary-headline">Standard Media Object</h3>
 
-<h3 class="tertiary-headline">Standard Media Object</h3>
-
-<div class="highlight highlight--flush">
-  <div class="media">
-    <div class="media__obj">
-      <img src="http://placehold.it/50x50" alt="">
-    </div>
-    <div class="media__body">
-      Consectetur delectus nesciunt blanditiis error similique fugit est aspernatur. Impedit facere aliquid quaerat libero sapiente animi provident est repudiandae earum. Voluptatum harum voluptate voluptates fuga nostrum magnam odio? Cum laborum.
+  <div class="highlight highlight--flush">
+    <div class="media">
+      <div class="media__obj">
+        <img src="http://placehold.it/50x50" alt="">
+      </div>
+      <div class="media__body">
+        Consectetur delectus nesciunt blanditiis error similique fugit est aspernatur. Impedit facere aliquid quaerat libero sapiente animi provident est repudiandae earum. Voluptatum harum voluptate voluptates fuga nostrum magnam odio? Cum laborum.
+      </div>
     </div>
   </div>
-</div>
 
-{{#code-block 'markup'}}<div class="media">
-  <div class="media__obj"><img src="..." alt=""></div>
-  <div class="media__body">...</div>
-</div>
-{{/code-block}}
+  {{#code-block 'markup'}}<div class="media">
+    <div class="media__obj"><img src="..." alt=""></div>
+    <div class="media__body">...</div>
+  </div>
+  {{/code-block}}
 
-<h3 class="tertiary-headline">Reversed Media Object</h3>
+  <h3 class="tertiary-headline">Reversed Media Object</h3>
 
-<div class="highlight highlight--flush">
-  <div class="media">
-    <div class="media__obj--rev">
-      <img src="http://placehold.it/50x50" alt="">
+  <div class="highlight highlight--flush">
+    <div class="media">
+      <div class="media__obj--rev">
+        <img src="http://placehold.it/50x50" alt="">
+      </div>
+      <div class="media__body">
+        Consectetur delectus nesciunt blanditiis error similique fugit est aspernatur. Impedit facere aliquid quaerat libero sapiente animi provident est repudiandae earum. Voluptatum harum voluptate voluptates fuga nostrum magnam odio? Cum laborum.
+      </div>
     </div>
-    <div class="media__body">
-      Consectetur delectus nesciunt blanditiis error similique fugit est aspernatur. Impedit facere aliquid quaerat libero sapiente animi provident est repudiandae earum. Voluptatum harum voluptate voluptates fuga nostrum magnam odio? Cum laborum.
+  </div>
+
+  {{#code-block 'markup'}}<div class="media">
+    <div class="media__obj--rev"><img src="..." alt=""></div>
+    <div class="media__body">...</div>
+  </div>
+  {{/code-block}}
+</div>
+
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">Notifications</h2>
+
+  <div class="highlight highlight--flush">
+    <div class="notification">
+      Default Notification
+    </div>
+
+    <div class="notification notification--alert">
+      Alert Notification
+    </div>
+
+    <div class="notification notification--warning">
+      Alert Warning
+    </div>
+
+    <div class="notification notification--success">
+      Success Notification
+    </div>
+
+    <div class="notification notification--notice">
+      Information Notification
     </div>
   </div>
+
+  {{#code-block 'markup'}}<div class="notification">...</div>
+  <div class="notification notification--alert">...</div>
+  <div class="notification notification--warning">...</div>
+  <div class="notification notification--success">...</div>
+  <div class="notification notification--notice">...</div>
+  {{/code-block}}
 </div>
 
-{{#code-block 'markup'}}<div class="media">
-  <div class="media__obj--rev"><img src="..." alt=""></div>
-  <div class="media__body">...</div>
-</div>
-{{/code-block}}
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">Table Styles</h2>
 
-<h2 class="secondary-headline doc-headline">Notifications</h2>
+  <h3 class="tertiary-headline">Standard Table</h3>
 
-<div class="highlight highlight--flush">
-  <div class="notification">
-    Default Notification
+  <div class="highlight highlight--flush">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brad</td>
+          <td>Dielman</td>
+          <td>@bdielman</td>
+        </tr>
+        <tr>
+          <td>Branden</td>
+          <td>Wiegand</td>
+          <td>@brandenwiegand</td>
+        </tr>
+        <tr>
+          <td>Joe</td>
+          <td>Fiorini</td>
+          <td>@joefiorini</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="notification notification--alert">
-    Alert Notification
-  </div>
-
-  <div class="notification notification--warning">
-    Alert Warning
-  </div>
-
-  <div class="notification notification--success">
-    Success Notification
-  </div>
-
-  <div class="notification notification--notice">
-    Information Notification
-  </div>
-</div>
-
-{{#code-block 'markup'}}<div class="notification">...</div>
-<div class="notification notification--alert">...</div>
-<div class="notification notification--warning">...</div>
-<div class="notification notification--success">...</div>
-<div class="notification notification--notice">...</div>
-{{/code-block}}
-
-<h2 class="secondary-headline doc-headline">Table Styles</h2>
-
-<h3 class="tertiary-headline">Standard Table</h3>
-
-<div class="highlight highlight--flush">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Brad</td>
-        <td>Dielman</td>
-        <td>@bdielman</td>
-      </tr>
-      <tr>
-        <td>Branden</td>
-        <td>Wiegand</td>
-        <td>@brandenwiegand</td>
-      </tr>
-      <tr>
-        <td>Joe</td>
-        <td>Fiorini</td>
-        <td>@joefiorini</td>
-      </tr>
-    </tbody>
+  {{#code-block 'markup'}}<table class="table">
+    ...
   </table>
-</div>
+  {{/code-block}}
 
-{{#code-block 'markup'}}<table class="table">
-  ...
-</table>
-{{/code-block}}
+  <h3 class="tertiary-headline">Striped Table</h3>
 
-<h3 class="tertiary-headline">Striped Table</h3>
+  <div class="highlight highlight--flush">
+    <table class="table table--striped">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brad</td>
+          <td>Dielman</td>
+          <td>@bdielman</td>
+        </tr>
+        <tr>
+          <td>Branden</td>
+          <td>Wiegand</td>
+          <td>@brandenwiegand</td>
+        </tr>
+        <tr>
+          <td>Joe</td>
+          <td>Fiorini</td>
+          <td>@joefiorini</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<div class="highlight highlight--flush">
-  <table class="table table--striped">
-    <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Brad</td>
-        <td>Dielman</td>
-        <td>@bdielman</td>
-      </tr>
-      <tr>
-        <td>Branden</td>
-        <td>Wiegand</td>
-        <td>@brandenwiegand</td>
-      </tr>
-      <tr>
-        <td>Joe</td>
-        <td>Fiorini</td>
-        <td>@joefiorini</td>
-      </tr>
-    </tbody>
+  {{#code-block 'markup'}}<table class="table table--striped">
+    ...
   </table>
-</div>
+  {{/code-block}}
 
-{{#code-block 'markup'}}<table class="table table--striped">
-  ...
-</table>
-{{/code-block}}
+  <h3 class="tertiary-headline">Hover Table</h3>
 
-<h3 class="tertiary-headline">Hover Table</h3>
+  <div class="highlight highlight--flush">
+    <table class="table table--hover">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Brad</td>
+          <td>Dielman</td>
+          <td>@bdielman</td>
+        </tr>
+        <tr>
+          <td>Branden</td>
+          <td>Wiegand</td>
+          <td>@brandenwiegand</td>
+        </tr>
+        <tr>
+          <td>Joe</td>
+          <td>Fiorini</td>
+          <td>@joefiorini</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<div class="highlight highlight--flush">
-  <table class="table table--hover">
-    <thead>
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Brad</td>
-        <td>Dielman</td>
-        <td>@bdielman</td>
-      </tr>
-      <tr>
-        <td>Branden</td>
-        <td>Wiegand</td>
-        <td>@brandenwiegand</td>
-      </tr>
-      <tr>
-        <td>Joe</td>
-        <td>Fiorini</td>
-        <td>@joefiorini</td>
-      </tr>
-    </tbody>
+  {{#code-block 'markup'}}<table class="table table--hover">
+    ...
   </table>
+  {{/code-block}}
 </div>
-
-{{#code-block 'markup'}}<table class="table table--hover">
-  ...
-</table>
-{{/code-block}}
