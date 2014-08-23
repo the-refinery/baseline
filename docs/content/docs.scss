@@ -2,6 +2,26 @@
 
 $default-bg-color: #f5f2f0;
 
+.l-doc-nav {
+  float: right;
+  width: (220 / 960) * 100%;
+
+  @media only screen and (max-width: em(700)) {
+    float: none;
+    width: 100%;
+  }
+}
+
+.l-doc-content {
+  float: left;
+  width: (700 / 960) * 100%;
+
+  @media only screen and (max-width: em(700)) {
+    float: none;
+    width: 100%;
+  }
+}
+
 .code {
   padding: 2px 5px;
   font-family: $monospace;
@@ -30,6 +50,10 @@ $default-bg-color: #f5f2f0;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAXUlEQVQoz2MwKVv/nxTMMKphVMOQ1/APionRsO65YdlaP6OSDb4gNl4NxqXrl2oXrhJigAIQ27hswxJsGl4Yla0LYsABQHIgNWANxqXrVhkXbxZhIACMi5eJgNQCAK08BKjeWehwAAAAAElFTkSuQmCC");
   background-position: 0 5px;
   background-repeat: no-repeat;
+
+  @media only screen and (max-width: em(820)) {
+    margin-left: 0;
+  }
 }
 
 .highlight {
