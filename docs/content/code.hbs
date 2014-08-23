@@ -71,19 +71,19 @@ template: default.hbs
 
   <p>The resulting code would look like this:</p>
 
-  {{#code-block 'markup'}}<div class="widget">
-    <p class="widget-title">...</p>
-    <p class="widget-body">...</p>
-  </div>
-  {{/code-block}}
+{{#code-block 'markup'}}<div class="widget">
+  <p class="widget-title">...</p>
+  <p class="widget-body">...</p>
+</div>
+{{/code-block}}
 
   <p>And with the modifier:</p>
 
-  {{#code-block 'markup'}}<div class="widget widget--light">
-    <p class="widget-title">...</p>
-    <p class="widget-body">...</p>
-  </div>
-  {{/code-block}}
+{{#code-block 'markup'}}<div class="widget widget--light">
+  <p class="widget-title">...</p>
+  <p class="widget-body">...</p>
+</div>
+{{/code-block}}
 
   <h3 class="tertiary-headline">States</h3>
 
@@ -108,12 +108,12 @@ template: default.hbs
 
   <p>Here is good example syntax:</p>
 
-  {{#code-block 'css'}}.styleguide-format {
-    border: 1px solid #0f0;
-    color: #000;
-    background: rgba(0,0,0,0.5);
-  }
-  {{/code-block}}
+{{#code-block 'css'}}.styleguide-format {
+  border: 1px solid #0f0;
+  color: #000;
+  background: rgba(0,0,0,0.5);
+}
+{{/code-block}}
 
   <h3 class="tertiary-headline">SCSS Style</h3>
 
@@ -125,19 +125,19 @@ template: default.hbs
 
   <p>Here is an example:</p>
 
-  {{#code-block 'scss'}}.widget {
-    @include clearfix;
-    @extend .component; 
-    border: 1px solid $border-color;
-    background: $background-color;
+{{#code-block 'scss'}}.widget {
+  @include clearfix;
+  @extend .component; 
+  border: 1px solid $border-color;
+  background: $background-color;
 
-    a {
-      color: $widget-link-color;
+  a {
+    color: $widget-link-color;
 
-      &:hover {
-        color: darken($widget-link-color, 10%):
-      }
+    &:hover {
+      color: darken($widget-link-color, 10%):
     }
   }
-  {{/code-block}}
+}
+{{/code-block}}
 </div>
