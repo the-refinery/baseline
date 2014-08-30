@@ -6,6 +6,16 @@
   padding: 0;
   height: 0;
   overflow: hidden;
+
+  // Added these based on @necolas FlexEmbed
+
+  &--16x9 {
+    padding-bottom: 56.25%;
+  }
+
+  &--4x3 {
+    padding-bottom: 75%;
+  }
 }
 
 .flex__item,
@@ -17,14 +27,4 @@ embed {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-// Added these based on @necolas FlexEmbed
-
-.flex-container--16x9 {
-  padding-bottom: 56.25%;
-}
-
-.flex-container--4x3 {
-  padding-bottom: 75%;
 }
