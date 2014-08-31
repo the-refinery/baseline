@@ -1,6 +1,16 @@
 @import "styles";
+@import "encoded-images";
 
 $default-bg-color: #f5f2f0;
+
+a {
+  color: #218aa3;
+
+  &:hover,
+  &:focus {
+    color: darken(#218aa3, 10%);
+  }
+}
 
 .l-doc-nav {
   float: right;
@@ -52,18 +62,36 @@ $default-bg-color: #f5f2f0;
 
 .doc-headline {
   @include hidpi(2) {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAoCAYAAADkDTpVAAAAq0lEQVR42u3OTQrCMBAF4DmCIN5DjeMR3LhRT+JCE3oaRVwV2smVFEHwEP684tIfWlPcvAcDIZmZLzLydmuzCBAgQIAAAQIECBAg8C/gimoLOLq1TVCP8yEp4IJt+kvryDM44+5nQEM8uVBM5U3whp6mwK769ZegR71tawDx7LzNpGYwg9mPgPq4H2dlVxoGs9jxCrioLxeSKMNVMcfOCtAQ80GW9yRxsBO77xdz/h8WtYldAAAAAElFTkSuQmCC");
+    background-image: $encoded-bookmarks-retina;
     background-size: 12px 20px;
   }
   margin-top: 40px;
   margin-left: -25px;
   padding-left: 25px;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAYAAAC58NwRAAAAXUlEQVQoz2MwKVv/nxTMMKphVMOQ1/APionRsO65YdlaP6OSDb4gNl4NxqXrl2oXrhJigAIQ27hswxJsGl4Yla0LYsABQHIgNWANxqXrVhkXbxZhIACMi5eJgNQCAK08BKjeWehwAAAAAElFTkSuQmCC");
+  background-image: $encoded-bookmarks;
   background-position: 0 5px;
   background-repeat: no-repeat;
 
   @media only screen and (max-width: em(820)) {
     margin-left: 0;
+  }
+}
+
+.logo {
+  margin: 40px 0;
+  
+  &__mark {
+    @include hide-text;
+    @include hidpi(2) {
+      background-image: $encoded-logo-retina;
+      background-size: 406px 99px;
+    }
+    display: block;
+    height: 99px;
+    width: 406px;
+    background-image: $encoded-logo;
+    background-position: 0 0;
+    background-repeat: no-repeat;
   }
 }
 
