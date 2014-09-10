@@ -63,31 +63,69 @@ template: default.hbs
   <h3 class="tertiary-headline">Modules</h3>
 
   <p>Modules are discrete components of the page, such as navigation, alert dialogs, the photo viewer, etc. This section of the CSS is where you will most likely spend most of your time. Any new features, design elements, components will be added to this section.</p>
-  <p>We have tried to maintain a consistent pattern on how to structure new modules, although in some cases you may find you will have to break that pattern to get the results you need. It follows some of the concepts from <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">BEM</a>.</p>
-  <p>New modules get their own style sheet to keep them sequestered from the rest. This makes maintenance much easier, especially in a large code base with many contributors. Modules shoule be broken down in <code class="code">blocks</code> and <code class="code">modifiers</code>. Here is an example of a module we'll call 'widget':</p>
-  <p>The main styles that control the widget will be attached to the root: <code class="code">widget</code>.</p>
-  <p>If the widget module contains any custom element styles such as headings they can be scoped to the widget like this: <code class="code">widget-title</code> or <code class="code">widget-heading</code>.</p>
-  <p>If there are any modifications to the original widget such as a lighter background color, you can add a modifier to the root class which uses two dashes to signify its relationship: <code class="code">widget--light</code></p>
 
-  <p>The resulting code would look like this:</p>
+  <h3 class="tertiary-headline">States</h3>
+
+  <p>State, as defined by SMACSS, augments and overrides all other styles. This section at the moment only contains styles that control the display state of an element such as whether or not is is hidden <code class="code">.is-hidden</code> or is visible <code class="code">.is-visible</code>. These can be expanded to also contain states such as whether an element is expanded or collapsed, or if the element is in an error state.</p>
+</div>
+
+<div class="doc-section">
+  <h2 class="secondary-headline doc-headline">BEM</h2>
+  <p>When creating new styles it is best to employ the BEM methodology.</p>
+
+  <blockquote>
+    <p>BEM – meaning block, element, modifier – is a front-end naming methodology thought up by the guys at Yandex. It is a smart way of naming your CSS classes to give them more transparency and meaning to other developers. <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">Harry Roberts of CSS Wizardry</a></p>
+  </blockquote>
+
+  <p>As stated by Harry Roberts in his article <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a>:</p>
+
+  <ul>
+    <li><code class="code">.block</code> represents the higher level of an abstraction or component.</li>
+    <li><code class="code">.block__element</code> represents a descendent of .block that helps form .block as a whole.</li>
+    <li><code class="code">.block--modifier</code> represents a different state or version of .block.</li>
+  </ul>
+
+  <p>Styles should be broken down in this pattern. Here is an example of a module we'll call <em>widget</em>:</p>
+  <p>The main styles that control the widget will be attached to the root: <code class="code">widget</code>.</p>
+  <p>If the widget module contains any custom element styles such as headings they can be scoped to the widget like this: <code class="code">widget__title</code> or <code class="code">widget__heading</code>.</p>
+  <p>If there are any modifications to the original widget such as a lighter background color, you can add a modifier to the root class which uses two dashes to signify its relationship: <code class="code">widget--light</code>.</p>
+  <p>An example in <code class="code">CSS</code> and <code class="code">SCSS</code> <strong>(Sass 3.2.15 and below)</strong>:</p>
+
+{{#code-block 'scss'}}.widget { ... }
+
+.widget__title { ... }
+
+.widget__body { ... }
+
+.widget--light { ... }
+{{/code-block}}
+
+  <p>An example in <code class="code">SCSS</code> <strong>(Sass 3.3 and above)</strong>:</p>
+
+{{#code-block 'scss'}}.widget {
+  &__title { ... }
+
+  &__body { ... }
+
+  &--light { ... }
+}
+{{/code-block}}
+
+  <p>The resulting <code class="code">HTML</code> would look like this:</p>
 
 {{#code-block 'markup'}}<div class="widget">
-  <p class="widget-title">...</p>
-  <p class="widget-body">...</p>
+  <p class="widget__title">...</p>
+  <p class="widget__body">...</p>
 </div>
 {{/code-block}}
 
   <p>And with the modifier:</p>
 
 {{#code-block 'markup'}}<div class="widget widget--light">
-  <p class="widget-title">...</p>
-  <p class="widget-body">...</p>
+  <p class="widget__title">...</p>
+  <p class="widget__body">...</p>
 </div>
 {{/code-block}}
-
-  <h3 class="tertiary-headline">States</h3>
-
-  <p>State, as defined by SMACSS, augments and overrides all other styles. This section at the moment only contains styles that control the display state of an element such as whether or not is is hidden <code class="code">.is-hidden</code> or is visible <code class="code">.is-visible</code>. These can be expanded to also contain states such as whether an element is expanded or collapsed, or if the element is in an error state.</p>
 </div>
 
 <div class="doc-section">
@@ -135,7 +173,7 @@ template: default.hbs
     color: $widget-link-color;
 
     &:hover {
-      color: darken($widget-link-color, 10%):
+      color: darken($widget-link-color, 10%);
     }
   }
 }

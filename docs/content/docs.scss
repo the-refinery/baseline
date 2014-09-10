@@ -12,6 +12,13 @@ a {
   }
 }
 
+blockquote {
+  margin-left: 0;
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
 .l-doc-nav {
   float: right;
   width: (220 / 960) * 100%;
@@ -34,7 +41,7 @@ a {
 
 .code {
   padding: 2px 5px;
-  font-family: $monospace;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
   color: #905;
   background-color: $default-bg-color;
   border: 1px solid $default-border-color;
