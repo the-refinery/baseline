@@ -6,20 +6,28 @@
 
 You'll need Node + npm and Bower, if you don't already have them:
 
-    $ brew install node
-    $ npm install -g bower
+```sh
+$ brew install node
+$ npm install -g bower
+```
 
 You'll also need the Broccoli cli:
 
-    $ npm install -g broccoli-cli
+```sh
+$ npm install -g broccoli-cli
+```
 
 Next install development dependencies:
 
-    $ npm install && bower install && bundle install
+```sh
+$ npm install && bower install && bundle install
+```
 
 And finally:
 
-    $ broccoli serve
+```sh
+$ broccoli serve
+```
 
 ## Modular CSS
 
