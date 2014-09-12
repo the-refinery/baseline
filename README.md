@@ -2,6 +2,25 @@
 
 **D-I Baseline** is a starting point for setting up styles on SCSS based project. This set of styles relies on using [Thoughtbot's Bourbon mixin library](http://bourbon.io).
 
+## Development
+
+You'll need Node + npm and Bower, if you don't already have them:
+
+    $ brew install node
+    $ npm install -g bower
+
+You'll also need the Broccoli cli:
+
+    $ npm install -g broccoli-cli
+
+Next install development dependencies:
+
+    $ npm install && bower install && bundle install
+
+And finally:
+
+    $ broccoli serve
+
 ## Modular CSS
 
 The style sheets have been structured with modularity in mind to make it easy to add new features and components while ensuring the code base is easy to maintain over time. The structure has borrowed a lot from [Jonathan Snook's SMACSS](http://smacss.com) (Scalable and Modular CSS) approach and so the stylesheets are broken down into four main sections:
@@ -149,22 +168,3 @@ And with the modifier:
   <p class="widget__body">…</p>
 </div>
 ```
-
-## Development
-
-You'll need Node + npm and Bower, if you don't already have them:
-
-    $ brew install node
-    $ npm install -g bower
-
-You'll also need the Broccoli cli:
-
-    $ npm install -g broccoli-cli
-
-Next install development dependencies:
-
-    $ npm install && bower install && bundle install
-
-And finally:
-
-    $ broccoli serve
