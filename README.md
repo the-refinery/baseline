@@ -4,16 +4,16 @@
 
 ## Development
 
-You'll need [Node](http://nodejs.org), [npm](https://www.npmjs.org) and [Bower](http://bower.io), if you don't already have them.
+You'll need [Node](http://nodejs.org), [npm](https://www.npmjs.org) and [Bower](http://bower.io), if you don't already have them:
 
-_Note: This assumes you have [Homebrew](http://brew.sh) installed. The Homebrew installation of Node also installs npm_
+_Note: This assumes you have [Homebrew](http://brew.sh) installed. The Homebrew installation of Node also installs npm_.
 
 ```sh
 $ brew install node
 $ npm install -g bower
 ```
 
-You'll also need the [Broccoli](https://github.com/broccolijs/broccoli) command line interface: [broccoli-cli](https://github.com/broccolijs/broccoli-cli):
+You'll also need the [Broccoli](https://github.com/broccolijs/broccoli) command line interface ([broccoli-cli](https://github.com/broccolijs/broccoli-cli)):
 
 ```sh
 $ npm install -g broccoli-cli
