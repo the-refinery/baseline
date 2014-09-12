@@ -42,6 +42,7 @@ $fg-max-columns: 12;
     width: flex-grid($i);
 
     @media screen and (max-width: em(700)) {
+      margin-left: 0;
       width: 100%;
     }
   }
