@@ -46,7 +46,10 @@
 // sits next to a button.
 
 .button-pseudo {
+  display: inline-block;
   padding: 8px 0;
+  line-height: normal;
+  vertical-align: middle;
 
   .button + & {
     margin-left: $default-whitespace;
