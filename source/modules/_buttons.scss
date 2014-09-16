@@ -50,6 +50,8 @@
   padding: 8px 0;
   line-height: normal;
   vertical-align: middle;
+  background: transparent;
+  border: 0;
 
   .button + & {
     margin-left: $default-whitespace;
