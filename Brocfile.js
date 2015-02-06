@@ -14,7 +14,7 @@ var pickFiles = require('broccoli-static-compiler'),
 
     source = 'source',
     test = 'test',
-    bourbon = 'bower_components/bourbon/dist',
+    bourbon = 'bower_components/bourbon/app/assets/stylesheets',
     normalize = 'bower_components/normalize-scss',
 
     testHtml = pickFiles(test, {
