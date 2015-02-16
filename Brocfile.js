@@ -14,6 +14,7 @@ var pickFiles = require('broccoli-static-compiler'),
 
     source = 'source',
     test = 'test',
+    docs = 'docs',
     bourbon = 'bower_components/bourbon/dist',
     normalize = 'bower_components/normalize-scss',
 
@@ -23,13 +24,13 @@ var pickFiles = require('broccoli-static-compiler'),
       destDir: test
     }),
 
-    docs = pickFiles('docs/content', {
+    docsContent = pickFiles('docs/content', {
       srcDir: '/',
       files: ['**/*.*'],
       destDir: '/'
     });
 
-    var docsHtml = HTMLPages(docs, pagesOptions);
+    var docsHtml = HTMLPages(docsContent, pagesOptions);
     docsHtml = MarkdownPages(docsHtml, pagesOptions);
     docsHtml = HBSPages(docsHtml, pagesOptions);
 
@@ -45,7 +46,7 @@ var pickFiles = require('broccoli-static-compiler'),
         testCss = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css', {
           bundleExec: true
         }),
-        docsCSS = compileSass([sassAndLib, docs], 'docs.scss', '/styles.css', {
+        docsCSS = compileSass([sassAndLib, docs + '/doc-styles'], 'docs.scss', '/styles.css', {
           bundleExec: true
         });
 
