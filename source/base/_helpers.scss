@@ -30,7 +30,7 @@
 // Notifications
 
 @mixin notification-colors($notification-color: $default-text-color) {
-  color: shade($notification-color, 50%);
-  background-color: tint($notification-color, 40%);
+  color: $notification-color;
+  background-color: tint($notification-color, 85%);
   border-color: shade($notification-color, 20%);
 }
