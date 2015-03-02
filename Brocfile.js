@@ -1,5 +1,5 @@
 var pickFiles = require('broccoli-static-compiler'),
-    compileSass = require('broccoli-ruby-sass'),
+    compileSass = require('broccoli-sass'),
     mergeTrees = require('broccoli-merge-trees'),
     HTMLPages = require('broccoli-pages').HTMLPages,
     MarkdownPages = require('broccoli-pages').MarkdownPages,
@@ -15,7 +15,7 @@ var pickFiles = require('broccoli-static-compiler'),
     source = 'source',
     test = 'test',
     docs = 'docs',
-    bourbon = 'bower_components/bourbon/dist',
+    bourbon = 'bower_components/bourbon/app/assets/stylesheets',
     normalize = 'bower_components/normalize-scss',
 
     testHtml = pickFiles(test, {
@@ -43,11 +43,7 @@ var pickFiles = require('broccoli-static-compiler'),
 
     var trees = [bourbon, normalize, source],
         sassAndLib = mergeTrees(trees, { overwrite: true }),
-        testCss = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css', {
-          bundleExec: true
-        }),
-        docsCSS = compileSass([sassAndLib, docs + '/doc-styles'], 'docs.scss', '/styles.css', {
-          bundleExec: true
-        });
+        testCss = compileSass([sassAndLib, test], 'test.scss', test + '/styles.css'),
+        docsCSS = compileSass([sassAndLib, docs + '/doc-styles'], 'docs.scss', '/styles.css');
 
 module.exports = mergeTrees([testCss, testHtml, docsCSS, docsHtml, prism]);

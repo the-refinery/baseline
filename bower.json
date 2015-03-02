@@ -1,8 +1,8 @@
 {
   "name": "Baseline",
   "dependencies": {
-    "bourbon": "latest",
-    "normalize-scss": "latest",
+    "bourbon": "4.2.1",
+    "normalize-scss": "3.0.2",
     "prism": "gh-pages"
   }
 }
