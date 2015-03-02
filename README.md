@@ -22,7 +22,7 @@ $ npm install -g broccoli-cli
 Next install development dependencies:
 
 ```sh
-$ npm install && bower install && bundle install
+$ npm install && bower install
 ```
 
 And finally:
