@@ -22,35 +22,35 @@
 
 // Surgical utilities
 
-.ptn, .pvn, .pan { padding-top: 0px !important }
-.pts, .pvs, .pas { padding-top: 5px !important }
-.ptm, .pvm, .pam { padding-top: 10px !important }
-.ptl, .pvl, .pal { padding-top: 20px !important }
-.prn, .phn, .pan { padding-right: 0px !important }
-.prs, .phs, .pas { padding-right: 5px !important }
-.prm, .phm, .pam { padding-right: 10px !important }
-.prl, .phl, .pal { padding-right: 20px !important }
-.pbn, .pvn, .pan { padding-bottom: 0px !important }  
-.pbs, .pvs, .pas { padding-bottom: 5px !important }
-.pbm, .pvm, .pam { padding-bottom: 10px !important }
-.pbl, .pvl, .pal { padding-bottom: 20px !important }
-.pln, .phn, .pan { padding-left: 0px !important }
-.pls, .phs, .pas { padding-left: 5px !important }
-.plm, .phm, .pam { padding-left: 10px !important }
-.pll, .phl, .pal { padding-left: 20px !important }
-.mtn, .mvn, .man { margin-top: 0px !important }
-.mts, .mvs, .mas { margin-top: 5px !important }
-.mtm, .mvm, .mam { margin-top: 10px !important }
-.mtl, .mvl, .mal { margin-top: 20px !important }
-.mrn, .mhn, .man { margin-right: 0px !important }
-.mrs, .mhs, .mas { margin-right: 5px !important }
-.mrm, .mhm, .mam { margin-right: 10px !important }
-.mrl, .mhl, .mal { margin-right: 20px !important }
-.mbn, .mvn, .man { margin-bottom: 0px !important }
-.mbs, .mvs, .mas { margin-bottom: 5px !important }
-.mbm, .mvm, .mam { margin-bottom: 10px !important }
-.mbl, .mvl, .mal { margin-bottom: 20px !important }
-.mln, .mhn, .man { margin-left: 0px !important }
-.mls, .mhs, .mas { margin-left: 5px !important }
-.mlm, .mhm, .mam { margin-left: 10px !important }
-.mll, .mhl, .mal { margin-left: 20px !important }
+.ptn, .pvn, .pan { padding-top: 0 !important }
+.pts, .pvs, .pas { padding-top: round(.25 * $default-whitespace) !important }
+.ptm, .pvm, .pam { padding-top: round(.5  * $default-whitespace) !important }
+.ptl, .pvl, .pal { padding-top: $default-whitespace !important }
+.prn, .phn, .pan { padding-right: 0 !important }
+.prs, .phs, .pas { padding-right: round(.25 * $default-whitespace) !important }
+.prm, .phm, .pam { padding-right: round(.5  * $default-whitespace) !important }
+.prl, .phl, .pal { padding-right: $default-whitespace !important }
+.pbn, .pvn, .pan { padding-bottom: 0 !important }  
+.pbs, .pvs, .pas { padding-bottom: round(.25 * $default-whitespace) !important }
+.pbm, .pvm, .pam { padding-bottom: round(.5  * $default-whitespace) !important }
+.pbl, .pvl, .pal { padding-bottom: $default-whitespace !important }
+.pln, .phn, .pan { padding-left: 0 !important }
+.pls, .phs, .pas { padding-left: round(.25 * $default-whitespace) !important }
+.plm, .phm, .pam { padding-left: round(.5  * $default-whitespace) !important }
+.pll, .phl, .pal { padding-left: $default-whitespace !important }
+.mtn, .mvn, .man { margin-top: 0 !important }
+.mts, .mvs, .mas { margin-top: round(.25 * $default-whitespace) !important }
+.mtm, .mvm, .mam { margin-top: round(.5  * $default-whitespace) !important }
+.mtl, .mvl, .mal { margin-top: $default-whitespace !important }
+.mrn, .mhn, .man { margin-right: 0 !important }
+.mrs, .mhs, .mas { margin-right: round(.25 * $default-whitespace) !important }
+.mrm, .mhm, .mam { margin-right: round(.5  * $default-whitespace) !important }
+.mrl, .mhl, .mal { margin-right: $default-whitespace !important }
+.mbn, .mvn, .man { margin-bottom: 0 !important }
+.mbs, .mvs, .mas { margin-bottom: round(.25 * $default-whitespace) !important }
+.mbm, .mvm, .mam { margin-bottom: round(.5  * $default-whitespace) !important }
+.mbl, .mvl, .mal { margin-bottom: $default-whitespace !important }
+.mln, .mhn, .man { margin-left: 0 !important }
+.mls, .mhs, .mas { margin-left: round(.25 * $default-whitespace) !important }
+.mlm, .mhm, .mam { margin-left: round(.5  * $default-whitespace) !important }
+.mll, .mhl, .mal { margin-left: $default-whitespace !important }

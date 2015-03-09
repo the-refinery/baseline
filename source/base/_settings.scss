@@ -26,9 +26,9 @@ $notification-notice: #31708f;
 // CONTENT DEFAULTS
 // ------------------
 
-$default-whitespace: 20px;
 $default-leading: 1.6;
-$condensed-whitespace: ($default-whitespace / 2);
+$default-whitespace: 20px;
+$condensed-whitespace: round(.5 * $default-whitespace);
 
 // FONTS
 // ------------------
