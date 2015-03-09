@@ -13,10 +13,10 @@
 
   > li {
     display: inline-block;
-    margin-left: $default-whitespace;
+    margin-right: $default-whitespace;
 
-    &:first-child {
-      margin-left: 0;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }
