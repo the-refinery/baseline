@@ -85,20 +85,19 @@ blockquote {
 }
 
 .logo {
-  margin: 40px 0;
-  
   &__mark {
-    @include hide-text;
-    @include hidpi(2) {
-      background-image: $encoded-logo-retina;
-      background-size: 406px 99px;
-    }
     display: block;
-    height: 99px;
-    width: 406px;
+    margin: 40px 0 20px;
+    padding-bottom: 24.384236453%;
+    text-indent: -9999em;
     background-image: $encoded-logo;
     background-position: 0 0;
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @include hidpi(2) {
+      background-image: $encoded-logo-retina;
+    }
   }
 }
 
