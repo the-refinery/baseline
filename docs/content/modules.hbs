@@ -34,15 +34,15 @@ template: default.hbs
   <h3 class="tertiary-headline">16x9 Aspect Ratio</h3>
 
   <div class="highlight highlight--flush">
-    <div class="flex-container flex-container--wide">
-      <div class="flex__item">
+    <div class="embed embed--16by9">
+      <div class="embed__item">
         <iframe width="420" height="315" src="http://www.youtube.com/embed/anLfoy2XsFw" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
-{{#code-block 'markup'}}<div class="flex-container flex-container--wide">
-  <div class="flex__item">
+{{#code-block 'markup'}}<div class="embed embed--16by9">
+  <div class="embed__item">
     ...
   </div>
 </div>
@@ -51,15 +51,15 @@ template: default.hbs
   <h3 class="tertiary-headline">4x3 Aspect Ratio</h3>
 
   <div class="highlight highlight--flush">
-    <div class="flex-container flex-container--standard">
-      <div class="flex__item">
+    <div class="embed embed--4by3">
+      <div class="embed__item">
         <iframe width="420" height="315" src="http://www.youtube.com/embed/anLfoy2XsFw" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
-{{#code-block 'markup'}}<div class="flex-container flex-container--standard">
-  <div class="flex__item">
+{{#code-block 'markup'}}<div class="embed embed--4by3">
+  <div class="embed__item">
     ...
   </div>
 </div>

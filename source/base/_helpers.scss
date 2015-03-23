@@ -34,3 +34,9 @@
   background-color: tint($notification-color, 85%);
   border-color: shade($notification-color, 20%);
 }
+
+// Responsive embeds
+
+@mixin embed($width, $height) {
+  padding-bottom: ($height / $width) * 100%;
+}

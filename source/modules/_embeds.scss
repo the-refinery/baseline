@@ -1,0 +1,31 @@
+// RESPONSIVE EMBEDS
+// ---------------------
+
+.embed {
+  position: relative;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+
+  &__item
+  iframe,
+  object,
+  embed  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// To add more aspect ratios use the embed
+// mixin with width and height variables
+
+.embed--16by9 {
+  @include embed(16, 9);
+}
+
+.embed--4by3 {
+  @include embed(4, 3);
+}
