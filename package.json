@@ -3,10 +3,10 @@
   "description": "A baseline for new SCSS based projects",
   "dependencies": {},
   "devDependencies": {
-    "broccoli": "^0.13.3",
+    "broccoli": "^0.16.3",
     "broccoli-merge-trees": "^0.2.1",
     "broccoli-pages": "^0.2.1",
-    "broccoli-sass": "^0.4.0",
+    "broccoli-sass": "^0.6.6",
     "broccoli-static-compiler": "^0.2.1"
   }
 }
