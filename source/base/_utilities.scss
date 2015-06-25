@@ -23,34 +23,34 @@
 // Surgical utilities
 
 .ptn, .pvn, .pan { padding-top: 0 !important }
-.pts, .pvs, .pas { padding-top: round(.25 * $default-whitespace) !important }
-.ptm, .pvm, .pam { padding-top: round(.5  * $default-whitespace) !important }
-.ptl, .pvl, .pal { padding-top: $default-whitespace !important }
+.pts, .pvs, .pas { padding-top: .5 * $default-whitespace !important }
+.ptm, .pvm, .pam { padding-top: $default-whitespace !important }
+.ptl, .pvl, .pal { padding-top: 2 * $default-whitespace !important }
 .prn, .phn, .pan { padding-right: 0 !important }
-.prs, .phs, .pas { padding-right: round(.25 * $default-whitespace) !important }
-.prm, .phm, .pam { padding-right: round(.5  * $default-whitespace) !important }
-.prl, .phl, .pal { padding-right: $default-whitespace !important }
+.prs, .phs, .pas { padding-right: .5 * $default-whitespace !important }
+.prm, .phm, .pam { padding-right: $default-whitespace !important }
+.prl, .phl, .pal { padding-right: 2  * $default-whitespace !important }
 .pbn, .pvn, .pan { padding-bottom: 0 !important }  
-.pbs, .pvs, .pas { padding-bottom: round(.25 * $default-whitespace) !important }
-.pbm, .pvm, .pam { padding-bottom: round(.5  * $default-whitespace) !important }
-.pbl, .pvl, .pal { padding-bottom: $default-whitespace !important }
+.pbs, .pvs, .pas { padding-bottom: .5 * $default-whitespace !important }
+.pbm, .pvm, .pam { padding-bottom: $default-whitespace !important }
+.pbl, .pvl, .pal { padding-bottom: 2 * $default-whitespace !important }
 .pln, .phn, .pan { padding-left: 0 !important }
-.pls, .phs, .pas { padding-left: round(.25 * $default-whitespace) !important }
-.plm, .phm, .pam { padding-left: round(.5  * $default-whitespace) !important }
-.pll, .phl, .pal { padding-left: $default-whitespace !important }
+.pls, .phs, .pas { padding-left: .5 * $default-whitespace !important }
+.plm, .phm, .pam { padding-left: $default-whitespace !important }
+.pll, .phl, .pal { padding-left: 2 * $default-whitespace !important }
 .mtn, .mvn, .man { margin-top: 0 !important }
-.mts, .mvs, .mas { margin-top: round(.25 * $default-whitespace) !important }
-.mtm, .mvm, .mam { margin-top: round(.5  * $default-whitespace) !important }
-.mtl, .mvl, .mal { margin-top: $default-whitespace !important }
+.mts, .mvs, .mas { margin-top: .5 * $default-whitespace !important }
+.mtm, .mvm, .mam { margin-top: $default-whitespace !important }
+.mtl, .mvl, .mal { margin-top: 2 * $default-whitespace !important }
 .mrn, .mhn, .man { margin-right: 0 !important }
-.mrs, .mhs, .mas { margin-right: round(.25 * $default-whitespace) !important }
-.mrm, .mhm, .mam { margin-right: round(.5  * $default-whitespace) !important }
-.mrl, .mhl, .mal { margin-right: $default-whitespace !important }
+.mrs, .mhs, .mas { margin-right: .5 * $default-whitespace !important }
+.mrm, .mhm, .mam { margin-right: $default-whitespace !important }
+.mrl, .mhl, .mal { margin-right: 2 * $default-whitespace !important }
 .mbn, .mvn, .man { margin-bottom: 0 !important }
-.mbs, .mvs, .mas { margin-bottom: round(.25 * $default-whitespace) !important }
-.mbm, .mvm, .mam { margin-bottom: round(.5  * $default-whitespace) !important }
-.mbl, .mvl, .mal { margin-bottom: $default-whitespace !important }
+.mbs, .mvs, .mas { margin-bottom: .5 * $default-whitespace !important }
+.mbm, .mvm, .mam { margin-bottom: $default-whitespace !important }
+.mbl, .mvl, .mal { margin-bottom: 2 * $default-whitespace !important }
 .mln, .mhn, .man { margin-left: 0 !important }
-.mls, .mhs, .mas { margin-left: round(.25 * $default-whitespace) !important }
-.mlm, .mhm, .mam { margin-left: round(.5  * $default-whitespace) !important }
-.mll, .mhl, .mal { margin-left: $default-whitespace !important }
+.mls, .mhs, .mas { margin-left: .5 * $default-whitespace !important }
+.mlm, .mhm, .mam { margin-left: $default-whitespace !important }
+.mll, .mhl, .mal { margin-left: 2 * $default-whitespace !important }
