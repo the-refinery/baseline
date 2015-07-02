@@ -31,9 +31,10 @@ $notification-notice: #31708f;
 // CONTENT DEFAULTS
 // ------------------
 
+$default-font-size: 16px;
 $default-leading: 1.6;
-$default-whitespace: 20px;
-$condensed-whitespace: round(.5 * $default-whitespace);
+$default-whitespace: 1.6 * $default-font-size;
+$condensed-whitespace: .5 * $default-whitespace;
 
 // FONTS
 // ------------------
