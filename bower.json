@@ -1,9 +1,0 @@
-{
-  "name": "Baseline",
-  "dependencies": {
-    "bourbon": "4.2.1",
-    "normalize-scss": "3.0.2",
-    "prism": "gh-pages",
-    "baseline-modernizr": "git@github.com:d-i/baseline-modernizr.git"
-  }
-}
