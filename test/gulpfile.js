@@ -8,10 +8,17 @@ var babel = require('gulp-babel');
 var addsrc = require('gulp-add-src');
 
 var paths = {
-  sass: './source/stylesheets/**/*.scss',
-  js: './source/javascripts/**/*.js',
+  html: './html/**/*.html',
+  sass: '../source/**/*.scss',
+  js: './javascripts/**/*.js',
   dist: './dist/'
 };
+
+// HTML
+gulp.task('html', function() {
+  return gulp.src(paths.html)
+    .pipe(gulp.dest(paths.dist));
+});
 
 // CSS
 gulp.task('sass', function() {
@@ -61,12 +68,13 @@ gulp.task('server', function() {
 
 // Watch
 gulp.task('watch', function() {
+  gulp.watch(paths.html, ['html']);
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.js, ['js']);
 });
 
 // Build
-gulp.task('build', ['sass', 'js']);
+gulp.task('build', ['html', 'sass', 'js']);
 
 // Default
 gulp.task('default', ['watch', 'build', 'server']);
