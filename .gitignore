@@ -1,5 +1,5 @@
-node_modules
-bower_components
+test/node_modules
+test/bower_components
 .sass-cache
 logs
 .swp
