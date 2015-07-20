@@ -5,7 +5,8 @@
 
 // Elipsis and break text
 
-%txt-truncate {
+%txt-truncate,
+.txt-truncate {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -13,7 +14,8 @@
   word-wrap: normal;
 }
 
-%txt-break {
+%txt-break,
+.txt-break {
   word-break: break-all;
   word-break: break-word;
   word-wrap: break-word;

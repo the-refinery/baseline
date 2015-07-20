@@ -1,0 +1,29 @@
+{
+  "name": "baseline",
+  "version": "1.0.1",
+  "homepage": "https://github.com/d-i/baseline",
+  "authors": [
+    "Brad Dielman <bdielman@gmail.com>"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "Sass",
+    "CSS",
+    "SCSS",
+    "BEM",
+    "OOCSS"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.3",
+    "normalize-scss": "~3.0.3",
+    "baseline-modernizr": "git@github.com:d-i/baseline-modernizr.git"
+  }
+}

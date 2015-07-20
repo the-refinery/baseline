@@ -1,0 +1,36 @@
+{
+  "name": "baseline",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/d-i/baseline.git"
+  },
+  "keywords": [
+    "Sass",
+    "CSS",
+    "SCSS",
+    "BEM",
+    "OOCSS"
+  ],
+  "author": "Brad Dielman <bdielman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/d-i/baseline/issues"
+  },
+  "homepage": "https://github.com/d-i/baseline#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-add-src": "^0.2.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-sass": "^2.0.3",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

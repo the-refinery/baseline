@@ -1,2 +1,10 @@
-.DS_Store
+test/node_modules
+test/bower_components
 .sass-cache
+logs
+.swp
+tmp
+dist
+*.sublime-project
+*.sublime-workspace
+.DS_Store
