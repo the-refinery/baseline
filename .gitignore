@@ -1,6 +1,7 @@
 test/node_modules
 test/bower_components
 .sass-cache
+_site
 logs
 .swp
 tmp
