@@ -1,26 +1,60 @@
 // MEDIA OBJECT
-// -------------------------
-// Ported from @stubbornella
+// --------------------------
+// Ported from Phillip Walton
 
 .media {
-  overflow: hidden;
-
-  &__body {
-    overflow: hidden;
-  }
+  display: flex;
+  align-items: flex-start;
 
   &__obj {
-    float: left;
     margin-right: $condensed-whitespace;
-    display: block;
 
     &--rev {
-      float: right;
+      order: 1;
+      margin-right: 0;
       margin-left: $condensed-whitespace;
     }
   }
 
+  &__body {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
   &__heading {
-    margin: 0 0 5px 0;
+    margin: 0 0 5px;
+  }
+
+  &--center {
+    align-items: center;
+  }
+
+  // No flexbox version presents a float-based layout
+  // for less capable browsers (pre IE10)
+  // ------------------------------------------------
+  // Ported from @stubbornella
+
+  .no-flexbox & {
+    overflow: hidden;
+
+    &__body {
+      overflow: hidden;
+    }
+
+    &__obj {
+      float: left;
+      margin-right: $condensed-whitespace;
+      display: block;
+
+      &--rev {
+        float: right;
+        margin-right: 0;
+        margin-left: $condensed-whitespace;
+      }
+    }
+
+    &__heading {
+      margin: 0 0 5px 0;
+    }
   }
 }
