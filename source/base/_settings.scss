@@ -47,4 +47,9 @@ $code-font: $monospace;
 // LAYOUT
 // ------------------
 
+// NOTE: Be sure to update the em calculator to reflect
+// any changes in the $default-font-size variable above.
+// For example, if the font-size is updated to 14px, then
+// the new value should be $l-max-width: em(960, 14);
+
 $l-max-width: em(960);
