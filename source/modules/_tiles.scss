@@ -16,6 +16,7 @@
 
   &__item {
     @include display(flex);
+    @include flex-direction(column); // Fixes a display issue in IE10
     margin-bottom: $condensed-whitespace;
 
     @include respond-to(em(500)) {
