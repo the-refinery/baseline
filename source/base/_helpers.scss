@@ -42,3 +42,19 @@
 @mixin embed($width, $height) {
   padding-bottom: ($height / $width) * 100%;
 }
+
+// Clearfix
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// Em Calculator
+
+@function em($pixel, $base: 16px){
+  @return ($pixel / $base) * 1em;
+}

@@ -2,6 +2,19 @@
 // --------------------------------------------
 
 // Setup the variables with Bourbon's Flex Grid
+// TODO: This should be re-written to our needs.
+
+@function flex-grid($columns, $container-columns: $fg-max-columns) {
+  $width: $columns * $fg-column + ($columns - 1) * $fg-gutter;
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($width / $container-width);
+}
+
+// Flexible gutter
+@function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($gutter / $container-width);
+}
 
 $fg-column: 60px;
 $fg-gutter: 20px;
@@ -14,7 +27,7 @@ $fg-max-columns: 12;
 }
 
 %col-base {
-  @include respond-to(em(700)) {
+  @include respond-to(em(700px)) {
     float: left;
     margin-left: flex-gutter();
 
@@ -35,7 +48,7 @@ $fg-max-columns: 12;
 
 @for $i from 1 through $fg-max-columns {
   .col-#{$i} {
-    @include respond-to(em(700)) {
+    @include respond-to(em(700px)) {
       @extend %col-base;
       width: flex-grid($i);
     }
@@ -50,12 +63,12 @@ $fg-max-columns: 12;
 
 @for $i from 1 through $fg-max-columns {
   .push-#{$i} {
-    @include respond-to(em(700)) {
+    @include respond-to(em(700px)) {
       margin-left: push($i, false);
     }
 
     &:first-child {
-      @include respond-to(em(700)) {
+      @include respond-to(em(700px)) {
         margin-left: push($i, true);
       }
     }

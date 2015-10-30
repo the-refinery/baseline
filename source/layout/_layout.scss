@@ -3,6 +3,13 @@
 // Prefix layout styles with `l-`
 // to make the context clear
 
+// NOTE: Be sure to update the em calculator to reflect
+// any changes in the $default-font-size variable above.
+// For example, if the font-size is updated to 14px, then
+// the new value should be $l-max-width: em(960px, 14px);
+
+$l-max-width: em(960px);
+
 // Main container styles
 
 .l-container {

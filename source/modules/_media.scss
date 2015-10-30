@@ -3,21 +3,21 @@
 // Ported from Phillip Walton
 
 .media {
-  @include display(flex);
-  @include align-items(flex-start);
+  display: flex;
+  align-items: flex-start;
 
   &__obj {
     margin-right: $condensed-whitespace;
 
     &--rev {
-      @include order(1);
+      order: 1;
       margin-right: 0;
       margin-left: $condensed-whitespace;
     }
   }
 
   &__body {
-    @include flex(1);
+    flex: 1;
     margin-bottom: 0;
   }
 
@@ -26,7 +26,7 @@
   }
 
   &--center {
-    @include align-items(center);
+    align-items: center;
   }
 
   // No flexbox version presents a float-based layout
