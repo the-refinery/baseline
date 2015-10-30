@@ -34,11 +34,11 @@ gulp.task('sass', function() {
 
   return gulp.src(paths.sass)
     .pipe(sass(sassOptions))
-    .pipe(connect.reload())
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
       cascade: false
     }))
+    .pipe(connect.reload())
     .pipe(gulp.dest(paths.dist));
 });
 
