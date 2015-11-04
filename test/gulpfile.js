@@ -6,6 +6,7 @@ var buffer = require('vinyl-buffer');
 var concat = require('gulp-concat');
 var babel = require('gulp-babel');
 var addsrc = require('gulp-add-src');
+var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
   html: './html/**/*.html',
@@ -23,7 +24,6 @@ gulp.task('html', function() {
 // CSS
 gulp.task('sass', function() {
   var includePaths = [
-    './bower_components/bourbon/app/assets/stylesheets',
     './bower_components/normalize-scss'
   ];
 
@@ -34,6 +34,10 @@ gulp.task('sass', function() {
 
   return gulp.src(paths.sass)
     .pipe(sass(sassOptions))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(connect.reload())
     .pipe(gulp.dest(paths.dist));
 });

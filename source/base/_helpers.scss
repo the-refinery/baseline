@@ -33,7 +33,7 @@
 
 @mixin notification-colors($notification-color: $default-text-color) {
   color: $notification-color;
-  background-color: tint($notification-color, 85%);
+  background-color: mix(#fff, $notification-color, 85%);
   border-color: shade($notification-color, 20%);
 }
 
@@ -41,4 +41,37 @@
 
 @mixin embed($width, $height) {
   padding-bottom: ($height / $width) * 100%;
+}
+
+// Clearfix
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+// Em Calculator
+
+@function em($pixel, $base: 16px){
+  @return ($pixel / $base) * 1em;
+}
+
+// Flexgrid function
+// ----------------------------------
+// Borrowed from Thoughtbot's Bourbon
+// TODO: This should be re-written to our needs.
+
+@function flex-grid($columns, $container-columns: $fg-max-columns) {
+  $width: $columns * $fg-column + ($columns - 1) * $fg-gutter;
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($width / $container-width);
+}
+
+// Flexible gutter
+@function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
+  $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+  @return percentage($gutter / $container-width);
 }

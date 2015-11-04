@@ -2,7 +2,6 @@
 // -------------
 
 .button {
-  @include user-select(none);
   display: inline-block;
   position: relative;
   margin: 0;
@@ -12,6 +11,7 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  user-select: none;
   white-space: nowrap;
   color: $button-text-color;
   background: $button-default;

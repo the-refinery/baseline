@@ -39,17 +39,7 @@ $condensed-whitespace: .5 * $default-whitespace;
 // FONTS
 // ------------------
 
-$headline-font: $helvetica; // TODO: Default to Helvetica for now, to be changed later
-$sans-serif-font: $helvetica;
-$serif-font: $georgia;
-$code-font: $monospace;
-
-// LAYOUT
-// ------------------
-
-// NOTE: Be sure to update the em calculator to reflect
-// any changes in the $default-font-size variable above.
-// For example, if the font-size is updated to 14px, then
-// the new value should be $l-max-width: em(960, 14);
-
-$l-max-width: em(960);
+$headline-font: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; // TODO: Default to Helvetica for now, to be changed later
+$sans-serif-font: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+$serif-font: "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$code-font: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;

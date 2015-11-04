@@ -14,7 +14,7 @@ $fg-max-columns: 12;
 }
 
 %col-base {
-  @include respond-to(em(700)) {
+  @include respond-to(em(700px)) {
     float: left;
     margin-left: flex-gutter();
 
@@ -35,7 +35,7 @@ $fg-max-columns: 12;
 
 @for $i from 1 through $fg-max-columns {
   .col-#{$i} {
-    @include respond-to(em(700)) {
+    @include respond-to(em(700px)) {
       @extend %col-base;
       width: flex-grid($i);
     }
@@ -50,12 +50,12 @@ $fg-max-columns: 12;
 
 @for $i from 1 through $fg-max-columns {
   .push-#{$i} {
-    @include respond-to(em(700)) {
+    @include respond-to(em(700px)) {
       margin-left: push($i, false);
     }
 
     &:first-child {
-      @include respond-to(em(700)) {
+      @include respond-to(em(700px)) {
         margin-left: push($i, true);
       }
     }
