@@ -60,6 +60,8 @@
 }
 
 // Flexgrid function
+// ----------------------------------
+// Borrowed from Thoughtbot's Bourbon
 // TODO: This should be re-written to our needs.
 
 @function flex-grid($columns, $container-columns: $fg-max-columns) {
