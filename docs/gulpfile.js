@@ -15,11 +15,11 @@ var addsrc = require('gulp-add-src');
 var autoprefixer = require('gulp-autoprefixer');
 
 var paths = {
-  templates: './templates/**/*.jade',
+  templates: './files/templates/**/*.jade',
   sass: '../source/**/*.scss',
-  js: './javascripts/**/*.js',
-  images: './images/**/*',
-  public: './public/**/*',
+  js: './files/javascripts/**/*.js',
+  images: './files/images/**/*',
+  public: './files/public/**/*',
   dist: './dist/'
 };
 
