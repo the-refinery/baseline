@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Baseline Docs
+
+    // Favicons
+
+    // Stylesheets
+    link(rel="stylesheet", href="/styles.css")
+    link(rel="stylesheet", href="/docs.css")
+
+  body
+    block header
+      include partials/_header
+
+    main(class="main", role="main")
+      .l-container
+        .row
+          .l-doc-nav
+            include partials/_nav
+
+          .l-doc-content
+            block content
+
+    block footer
+      // include partials/_footer
+
+    script(src="/application.js", async)

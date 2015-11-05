@@ -1,0 +1,105 @@
+extends _layout
+
+block prepend header
+  - var currentSection = 'layout';
+
+block content
+  .l-section
+    h1.primary-docs-headline Layout Styles
+    p These are styles that drive the layout of the site. They are based on a 12 column grid with a width of #[code.code 960px].
+
+    .doc-section
+      h2.secondary-headline.doc-headline The Grid
+
+      h3.tertiary-headline Details
+
+      ul
+        li Columns <code class="code">col-*</code> must be wrapped in a container with a class of #[code.code row].
+        li Use rows to create horizontal groups of columns.
+        li Content should be placed within columns, and only columns may be immediate children of rows.
+        li Predefined grid classes like #[code.code .row] and #[code.code .col-*] are available for quickly making grid layouts.
+
+      h3.tertiary-headline Example
+
+      .grid-demo
+        .row
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+          .col-1 col-1
+
+        .row
+          .col-12 col-12
+
+        .row
+          .col-1 col-1
+          .col-11 col-11
+
+        .row
+          .col-2 col-2
+          .col-10 col-10
+
+        .row
+          .col-3 col-3
+          .col-9 col-9
+
+        .row
+          .col-4 col-4
+          .col-8 col-8
+
+        .row
+          .col-5 col-5
+          .col-7 col-7
+
+        .row
+          .col-6 col-6
+          .col-6 col-6
+
+        .row
+          .col-2 col-2
+          .col-4 col-4
+          .col-2 col-2
+          .col-4 col-4
+
+      h3.tertiary-headline Code Sample
+
+      pre
+        code.language-html
+          :code
+            <div class="row">
+              <div class="col-2">...</div>
+              <div class="col-4">...</div>
+              <div class="col-2">...</div>
+              <div class="col-4">...</div>
+            </div>
+
+  .doc-section
+    h3.tertiary-headline Grid Offsets
+
+    p Use the offset for the grids to offset a column from the edge the container, or to increase the spacing between columns in the layout.
+
+    .grid-demo
+      .row
+        .col-9.push-3 col-9 push-3
+      .row
+        .col-3 col-3
+        .col-3.push-6 col3 push-6
+
+    pre
+      code.language-html
+        :code
+          <div class="row">
+            <div class="col-9 push-3">...</div>
+          </div>
+          <div class="row">
+            <div class="col-3">...</div>
+            <div class="col-3 push-6">...</div>
+          </div>

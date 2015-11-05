@@ -1,0 +1,280 @@
+// CUSTOM DOCS STYLES
+// ------------------
+
+@font-face {
+  font-family: 'Audimat3000-Regulier';
+  src: url('fonts/2F676B_6_0.woff2') format('woff2'),
+       url('fonts/2F676B_6_0.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Audimat3000-Mi-gras';
+  src: url('fonts/2F676B_2_0.woff2') format('woff2'),
+       url('fonts/2F676B_2_0.woff') format('woff');
+}
+
+$default-bg-color: #f5f2f0;
+$doc-brand-color: #9f2b33;
+
+code, kbd, samp {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: em(14px);
+}
+
+a {
+  color: $doc-brand-color;
+
+  &:hover,
+  &:focus {
+    color: darken($doc-brand-color, 10%);
+  }
+}
+
+[role="banner"] {
+  padding: 40px 0;
+
+  .l-container {
+    border-bottom: 1px solid $doc-brand-color;
+  }
+}
+
+blockquote {
+  margin-left: 0;
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.l-doc-nav {
+  float: right;
+  width: (220 / 960) * 100%;
+
+  @media only screen and (max-width: em(700px)) {
+    float: none;
+    width: 100%;
+  }
+}
+
+.l-doc-content {
+  float: left;
+  width: (700 / 960) * 100%;
+
+  @media only screen and (max-width: em(700px)) {
+    float: none;
+    width: 100%;
+  }
+}
+
+.code {
+  padding: 2px 5px;
+  color: #d14;
+  background-color: #fff;
+  border: 1px solid $default-border-color;
+  border-radius: 2px;
+}
+
+.main {
+  margin-bottom: ($default-whitespace * 2);
+}
+
+.primary-docs-headline {
+  margin-top: 0;
+  line-height: 1;
+  font-family: 'Audimat3000-Regulier', $sans-serif-font;
+  font-weight: 400;
+  font-size: em(40px);
+  color: $doc-brand-color;
+}
+
+.doc-section {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $default-border-color;
+
+  &:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.doc-headline {
+  margin-top: 40px;
+  margin-left: -25px;
+  padding-left: 25px;
+  font-family: 'Audimat3000-Regulier', $sans-serif-font;
+  font-weight: 400;
+  font-size: em(30px);
+  color: $doc-brand-color;
+  background-image: url("images/bookmark.svg");
+  background-position: 0 5px;
+  background-repeat: no-repeat;
+  background-size: 12px 20px;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media only screen and (max-width: em(820px)) {
+    margin-left: 0;
+  }
+}
+
+.logo {
+  &__mark {
+    display: block;
+    height: 40px;
+    width: 158px;
+    text-indent: -9999em;
+    background-image: url("images/logo-refinery.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__type {
+    margin: 20px 0;
+    display: block;
+    font-family: 'Audimat3000-Mi-gras', $sans-serif-font;
+    font-size: em(64px);
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+    color: #00244c;
+
+    &:hover,
+    &:focus {
+      color: darken(#00244c, 10%);
+    }
+  }
+}
+
+.highlight {
+  margin-bottom: $default-whitespace;
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+pre[class*="language-"] {
+  position: relative;
+  margin-bottom: $default-whitespace !important;
+  border: 1px solid $default-border-color;
+  border-radius: 6px;
+
+  &:after {
+    content: "code";
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-family: $sans-serif-font;
+    font-size: em(12px);
+    color: #999;
+    background: #fff;
+    border: 1px solid $default-border-color;
+    border-top: 0;
+    border-right: 0;
+    border-radius: 0 6px 0 6px;
+  }
+}
+
+@each $code-type in css, scss, html, javascript {
+  pre[class*="#{$code-type}"] {
+    &:after {
+      content: "#{$code-type}";
+    }
+  }
+} 
+
+.table--demo {
+  margin-bottom: 0;
+
+  tr {
+    border-bottom: 1px solid #ccc;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  td {
+    padding: em(10px);
+  }
+}
+
+.table--demo {
+  [class*="headline"] {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border-bottom: 0;
+  }
+}
+
+// Documentation nav
+
+.nav-doc {
+  @include clearfix;
+  margin: 0 0 $default-whitespace;
+
+  a {
+    display: block;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: $default-bg-color;
+    border-bottom: 1px solid #fff;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: mix(#fff, $doc-brand-color, 20%);
+    }
+
+    &.active {
+      color: #fff;
+      background-color: $doc-brand-color;
+    }
+
+    &:first-child {
+      border-radius: 6px 6px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 6px 6px;
+    }
+
+    @media only screen and (min-width: em(500px)) and (max-width: em(700px)) {
+      float: left;
+      width: (100% / 5);
+      border-left: 1px solid #fff;
+      border-bottom: 0;
+
+      &:first-child {
+        border-left: 0;
+        border-radius: 6px 0 0 6px;
+      }
+
+      &:last-child {
+        border-radius: 0 6px 6px 0;
+      }
+    }
+  }
+}
+
+// Grid example
+
+.grid-demo {
+  text-align: center;
+
+  .row {
+    margin-bottom: $default-whitespace;
+  }
+
+  [class*="col"] {
+    padding: 8px 0;
+    outline: 1px solid $default-border-color;
+  }
+}

@@ -22,8 +22,9 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "~4.2.3",
     "normalize-scss": "~3.0.3",
+    "jquery": "~2.1.4",
+    "prism": "~1.2.0",
     "baseline-modernizr": "git@github.com:d-i/baseline-modernizr.git"
   }
 }
