@@ -1,0 +1,120 @@
+extends _layout
+
+block prepend header
+  - var currentSection = 'base';
+
+block content
+  .l-section
+    h1.primary-docs-headline Base Styles
+
+    .doc-section
+      h2.secondary-headline.doc-headline Content Styles
+
+      h3.tertiary-headline Headlines
+
+      .highlight
+        table.table.table--demo
+          tbody
+            tr
+              td
+                h1.primary-headline Primary Headline
+            tr
+              td
+                h2.secondary-headline Secondary Headline
+            tr
+              td
+                h3.tertiary-headline Tertiary Headline
+
+      pre
+        code.language-html
+          :code
+            <h1 class="primary-headline">...</h1>
+            <h2 class="secondary-headline">...</h2>
+            <h3 class="tertiary-headline">...</h3>
+
+    .doc-section
+      h2.secondary-headline.doc-headline Utilities
+
+      h3.tertiary-headline Text Utilities
+
+      .highlight
+        table.table.table--demo
+          tbody
+            tr
+              td.txt-left Left aligned text
+            tr
+              td.txt-center Center aligned text
+            tr
+              td.txt-right Right aligned text
+            tr
+              td.txt-justify
+                strong Justified text
+                | Adipisicing maiores illum tempore quaerat perferendis, suscipit vel! Expedita quos nemo nihil similique laudantium doloribus. Vitae at inventore in eaque provident rem eum. Vero sapiente facere libero totam omnis totam.
+            tr
+              td.r-txt-right 
+                | Responsive right aligned text #[small: em.txt-alert Converts to left aligned for small screens].
+
+      pre
+        code.language-html
+          :code
+            <div class="txt-left">...</div>
+            <div class="txt-center">...</div>
+            <div class="txt-right">...</div>
+            <div class="txt-justify">...</div>
+            <div class="r-txt-right">...</div>
+
+
+    .doc-section
+      h3.tertiary-headline Surgical Classes
+      p These surgical classes will add padding or margins to elements.
+
+      .highlight
+        table.table.table--demo
+          tbody
+            tr
+              td #[code.code p]
+              td Apply padding to the element.
+            tr
+              td #[code.code m]
+              td Apply margin to the element.
+            tr
+              td #[code.code a]
+              td Apply padding or margins to all sides.
+            tr
+              td #[code.code v]
+              td Apply padding or margins to top and bottom of the element.
+            tr
+              td #[code.code h]
+              td Apply padding or margins to the right and left sides of the element.
+            tr
+              td #[code.code t, r, b, l]
+              td Apply padding or margins to top, right, bottom, or left sides respectively.
+            tr
+              td #[code.code s, m, l]
+              td Choose either small, medium, or large sizes for the padding and margins.
+
+      pre
+        code.language-html
+          :code
+            <!-- Applies a large margin to all sides of an element -->
+            <div class="mal">...</div>
+            <!-- Applies medium padding to the vertical sides of an element -->
+            <div class="pvm">...</div>
+
+    .doc-section
+      h2.secondary-headline.doc-headline Helpers
+
+      .highlight
+        div(style="width: 200px")
+          p: strong Truncate Text
+          p.txt-truncate Amet at eveniet repellat beatae corporis nihil? Ad voluptate perspiciatis voluptas alias numquam sapiente soluta molestiae dignissimos. Tenetur temporibus architecto autem quidem quo quas fugiat! Ratione adipisci atque asperiores autem!
+            
+        div(style="width: 200px")
+          p: strong Break Text
+          a.txt-break Amet at eveniet repellat beatae corporis nihil? Ad voluptate perspiciatis voluptas alias numquam sapiente soluta molestiae dignissimos. Tenetur temporibus architecto autem quidem quo quas fugiat! Ratione adipisci atque asperiores autem!
+
+      pre
+        code.language-html
+          :code
+            <p class="txt-truncate">...</p>
+            <a href="#" class="txt-break">...</a>

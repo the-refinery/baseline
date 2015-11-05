@@ -17,8 +17,10 @@ var autoprefixer = require('gulp-autoprefixer');
 var paths = {
   templates: './files/templates/**/*.jade',
   sass: '../source/**/*.scss',
+  docsSass: './files/stylesheets/**/*.scss',
   js: './files/javascripts/**/*.js',
   images: './files/images/**/*',
+  fonts: './files/fonts/**.*',
   public: './files/public/**/*',
   dist: './dist/'
 };
@@ -39,7 +41,7 @@ jade.filters.code = function(block) {
 // Templates
 gulp.task('templates', function() {
   var YOUR_LOCALS = {};
-  return gulp.src([paths.templates, '!./templates/**/_*.jade'])
+  return gulp.src([paths.templates, '!./files/templates/**/_*.jade'])
     .pipe(gulpJade({
       jade: jade,
       pretty: !isProduction
@@ -51,8 +53,7 @@ gulp.task('templates', function() {
 // CSS
 gulp.task('sass', function() {
   var includePaths = [
-    './bower_components/normalize-scss',
-    './bower_components/prism/themes'
+    './bower_components/normalize-scss'
   ];
 
   var sassOptions = {
@@ -65,6 +66,31 @@ gulp.task('sass', function() {
   }
 
   return gulp.src(paths.sass)
+    .pipe(sass(sassOptions))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(connect.reload())
+    .pipe(gulp.dest(paths.dist));
+});
+
+// Docs CSS
+gulp.task('docsSass', function() {
+  var includeDocPaths = [
+    './bower_components/prism/themes'
+  ];
+
+  var sassOptions = {
+    outputStyle: 'expanded',
+    includePaths: includeDocPaths
+  };
+
+  if (isProduction) {
+    sassOptions.outputStyle = 'compressed';
+  }
+
+  return gulp.src(paths.docsSass)
     .pipe(sass(sassOptions))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
@@ -111,6 +137,12 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.dist + '/images'));
 });
 
+// Font Awesome
+gulp.task('fonts', function() {
+  return gulp.src(paths.fonts)
+    .pipe(gulp.dest(paths.dist + '/fonts'));
+});
+
 // Public
 // Files under the public folder are brought over into dist
 // without any processing.
@@ -129,13 +161,14 @@ gulp.task('server', function() {
 
 // Watch
 gulp.task('watch', function() {
-  gulp.watch(paths.html, ['html']);
+  gulp.watch(paths.templates, ['templates']);
   gulp.watch(paths.sass, ['sass']);
+  gulp.watch(paths.docsSass, ['docsSass']);
   gulp.watch(paths.js, ['js']);
 });
 
 // Build
-gulp.task('build', ['templates', 'sass', 'js', 'images', 'public']);
+gulp.task('build', ['templates', 'sass', 'docsSass', 'js', 'images', 'fonts', 'public']);
 
 // Default
 gulp.task('default', ['watch', 'build', 'server']);

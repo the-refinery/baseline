@@ -1,0 +1,31 @@
+extends _layout
+
+block prepend header
+  - var currentSection = 'state';
+
+block content
+  .l-section
+    h1.primary-docs-headline State Styles
+
+    .doc-section
+      h2.secondary-headline.doc-headline Display States
+      .highlight
+        table.table.table--demo
+          tbody
+            tr
+              td 
+                code.code .is-hidden
+              td Hide from browsers and screen readers.
+            tr
+              td 
+                code.code .is-hidden-visually
+              td Hide from browsers, but let screen readers access the content.
+            tr
+              td
+                code.code .is-invisible
+              td Hide from browsers, but don't remove from document flow.
+            tr
+              td 
+                code.code .is-visible 
+              td Use to toggle the #[code.code .is-invisible] state above.
+
