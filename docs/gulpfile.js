@@ -52,7 +52,7 @@ gulp.task('templates', function() {
 // CSS
 gulp.task('sass', function() {
   var includePaths = [
-    './bower_components/normalize-scss'
+    './node_modules/normalize.css'
   ];
 
   var sassOptions = {
@@ -77,7 +77,7 @@ gulp.task('sass', function() {
 // Docs CSS
 gulp.task('docsSass', function() {
   var includeDocPaths = [
-    './bower_components/prism/themes'
+    './node_modules/prismjs/themes'
   ];
 
   var sassOptions = {
@@ -102,14 +102,14 @@ gulp.task('docsSass', function() {
 // JS
 gulp.task('js', function () {
   var modules = [
-    './source/javascripts/modules/**/*.js',
-    './source/javascripts/main.js'
+    './files/javascripts/modules/**/*.js',
+    './files/javascripts/main.js'
   ];
 
   var lib = [
-    './bower_components/baseline-modernizr/baseline-modernizr.js',
-    './bower_components/prism/prism.js',
-    './bower_components/prism/components/prism-scss.js'
+    './files/javascripts/baseline-modernizr.js',
+    './node_modules/prismjs/prism.js',
+    './node_modules/prismjs/components/prism-scss.js'
   ];
 
   return gulp.src(modules)
