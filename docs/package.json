@@ -34,7 +34,7 @@
     "gulp-jade": "^1.0.0",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.2.0",
+    "gulp-uglify": "^1.5.1",
     "gulp-util": "^3.0.4",
     "jade": "^1.11.0",
     "vinyl-buffer": "^1.0.0",
