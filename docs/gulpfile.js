@@ -20,7 +20,6 @@ var paths = {
   docsSass: './files/stylesheets/**/*.scss',
   js: './files/javascripts/**/*.js',
   images: './files/images/**/*',
-  fonts: './files/fonts/**.*',
   public: './files/public/**/*',
   dist: './dist/'
 };
@@ -137,12 +136,6 @@ gulp.task('images', function() {
     .pipe(gulp.dest(paths.dist + '/images'));
 });
 
-// Font Awesome
-gulp.task('fonts', function() {
-  return gulp.src(paths.fonts)
-    .pipe(gulp.dest(paths.dist + '/fonts'));
-});
-
 // Public
 // Files under the public folder are brought over into dist
 // without any processing.
@@ -168,7 +161,7 @@ gulp.task('watch', function() {
 });
 
 // Build
-gulp.task('build', ['templates', 'sass', 'docsSass', 'js', 'images', 'fonts', 'public']);
+gulp.task('build', ['templates', 'sass', 'docsSass', 'js', 'images', 'public']);
 
 // Default
 gulp.task('default', ['watch', 'build', 'server']);
