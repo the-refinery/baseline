@@ -2,9 +2,9 @@
 // ------------------
 
 @font-face {
-  font-family: 'Audimat3000-Regulier';
-  src: url('fonts/2F676B_6_0.woff2') format('woff2'),
-       url('fonts/2F676B_6_0.woff') format('woff');
+  font-family: 'Audimat3000-Gras';
+  src: url('fonts/2F676B_0_0.woff2') format('woff2'),
+       url('fonts/2F676B_0_0.woff') format('woff');
 }
 
 @font-face {
@@ -14,7 +14,9 @@
 }
 
 $default-bg-color: #f5f2f0;
-$doc-brand-color: #9f2b33;
+$brand-rose: #ed2f48;
+$brand-navy: #00244c;
+$brand-scarlet: #af222a;
 
 code, kbd, samp {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
@@ -22,11 +24,11 @@ code, kbd, samp {
 }
 
 a {
-  color: $doc-brand-color;
+  color: $brand-scarlet;
 
   &:hover,
   &:focus {
-    color: darken($doc-brand-color, 10%);
+    color: darken($brand-scarlet, 10%);
   }
 }
 
@@ -34,7 +36,7 @@ a {
   padding: 40px 0;
 
   .l-container {
-    border-bottom: 1px solid $doc-brand-color;
+    border-bottom: 1px solid $brand-scarlet;
   }
 }
 
@@ -80,10 +82,10 @@ blockquote {
 .primary-docs-headline {
   margin-top: 0;
   line-height: 1;
-  font-family: 'Audimat3000-Regulier', $sans-serif-font;
-  font-weight: 400;
-  font-size: em(40px);
-  color: $doc-brand-color;
+  font-family: 'Audimat3000-Gras', $sans-serif-font;
+  font-size: em(32px);
+  text-transform: uppercase;
+  color: $brand-navy;
 }
 
 .doc-section {
@@ -101,12 +103,12 @@ blockquote {
   margin-top: 40px;
   margin-left: -25px;
   padding-left: 25px;
-  font-family: 'Audimat3000-Regulier', $sans-serif-font;
-  font-weight: 400;
-  font-size: em(30px);
-  color: $doc-brand-color;
+  font-family: 'Audimat3000-Mi-gras', $sans-serif-font;
+  font-size: em(24px);
+  text-transform: uppercase;
+  color: $brand-rose;
   background-image: url("images/bookmark.svg");
-  background-position: 0 5px;
+  background-position: 0 1px;
   background-repeat: no-repeat;
   background-size: 12px 20px;
 
@@ -134,7 +136,7 @@ blockquote {
   &__type {
     margin: 20px 0;
     display: block;
-    font-family: 'Audimat3000-Mi-gras', $sans-serif-font;
+    font-family: 'Audimat3000-Gras', $sans-serif-font;
     font-size: em(64px);
     text-transform: uppercase;
     text-decoration: none;
@@ -230,12 +232,12 @@ pre[class*="language-"] {
     &:hover,
     &:focus {
       color: #fff;
-      background-color: mix(#fff, $doc-brand-color, 20%);
+      background-color: mix(#fff, $brand-scarlet, 20%);
     }
 
     &.active {
       color: #fff;
-      background-color: $doc-brand-color;
+      background-color: $brand-scarlet;
     }
 
     &:first-child {
