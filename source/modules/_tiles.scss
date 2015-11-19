@@ -21,14 +21,14 @@
 
     @include respond-to(em(500px)) {
       padding-left: $condensed-whitespace;
-      width: 50%;
+      width: percentage(1 / 2);
     }
   }
 
   &-container--three {
     .tile__item {
       @include respond-to(em(700px)) {
-        width: 33.33%;
+        width: percentage(1 / 3);
       }
     }
   }
@@ -36,11 +36,11 @@
   &-container--four {
     .tile__item {
       @include respond-to(em(700px)) {
-        width: 33.33%;
+        width: percentage(1 / 3);
       }
 
       @include respond-to(em(900px)) {
-        width: 25%;
+        width: percentage(1 / 4);
       }
     }
   }

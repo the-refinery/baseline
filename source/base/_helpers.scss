@@ -34,13 +34,13 @@
 @mixin notification-colors($notification-color: $default-text-color) {
   color: $notification-color;
   background-color: mix(#fff, $notification-color, 85%);
-  border-color: shade($notification-color, 20%);
+  border-color: mix(#000, $notification-color, 20%);
 }
 
 // Responsive embeds
 
 @mixin embed($width, $height) {
-  padding-bottom: ($height / $width) * 100%;
+  padding-bottom: percentage($height / $width);
 }
 
 // Clearfix
