@@ -1,6 +1,6 @@
-# D-I Baseline
+# Baseline
 
-**D-I Baseline** is a starting point for setting up styles on SCSS based project.
+**Baseline** is a starting point for setting up styles on SCSS based project.
 
 ## Usage
 
