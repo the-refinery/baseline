@@ -114,6 +114,12 @@ blockquote {
 
   a {
     text-decoration: none;
+    color: $brand-rose;
+
+    &:hover,
+    &:focus {
+      color: darken($brand-rose, 10%);
+    }
   }
 
   @media only screen and (max-width: em(820px)) {
