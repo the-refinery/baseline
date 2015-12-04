@@ -29,7 +29,7 @@
 .form-vertical {
   label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: em(5px);
   }
 
   input[type="color"],
@@ -50,6 +50,26 @@
   select {
     display: block;
     margin-bottom: $default-whitespace;
+  }
+}
+
+// Field pair form
+
+.form-pair {
+  &__group {
+    margin-bottom: $default-whitespace;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  label {
+    margin-bottom: em(5px);
+    flex: 0 0 em(120px);
+    margin-right: em(10px);;
+  }
+
+  input {
+    flex: 1 1 em(192px);
   }
 }
 
