@@ -43,3 +43,17 @@ $headline-font: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; //
 $sans-serif-font: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 $serif-font: "Georgia", "Cambria", "Times New Roman", "Times", serif;
 $code-font: "Bitstream Vera Sans Mono", "Consolas", "Courier", monospace;
+
+// LAYOUT
+// ------------------
+
+// Max-width of site container
+
+$l-max-width: em(960px);
+
+// Setup the grid variables with Bourbon's 
+// Flex Grid found in _helpers.scss
+
+$fg-column: 60px;
+$fg-gutter: 20px;
+$fg-max-columns: 12;
