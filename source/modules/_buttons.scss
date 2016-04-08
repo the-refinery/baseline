@@ -3,7 +3,6 @@
 
 .button {
   display: inline-block;
-  position: relative;
   margin: 0;
   padding: 8px 12px;
   cursor: pointer;
@@ -17,7 +16,7 @@
   background: $button-default;
   border: 1px solid $default-border-color;
   border-radius: 3px;
-  -webkit-appearance: none;
+  appearance: none;
 
   &:hover,
   &:focus {
