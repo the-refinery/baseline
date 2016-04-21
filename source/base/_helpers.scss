@@ -59,6 +59,12 @@
   @return ($pixel / $base) * 1em;
 }
 
+// REM Calculator
+
+@function rem($pixel, $base: 16px){
+  @return ($pixel / $base) * 1rem;
+}
+
 // Flexgrid function
 // ----------------------------------
 // Borrowed from Thoughtbot's Bourbon
