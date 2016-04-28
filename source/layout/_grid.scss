@@ -29,8 +29,9 @@
 
 @for $i from 1 through $fg-max-columns {
   .col-#{$i} {
+    @extend %col-base;
+
     @include respond-to(em(700px)) {
-      @extend %col-base;
       width: flex-grid($i);
     }
   }
