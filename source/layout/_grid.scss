@@ -11,6 +11,7 @@
   @include respond-to(em(700px)) {
     float: left;
     margin-left: flex-gutter();
+    min-height: 1px; // This will keep empty columns from collapsing. -BD
 
     &:first-child {
       margin-left: 0;
