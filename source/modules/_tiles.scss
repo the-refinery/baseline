@@ -15,13 +15,17 @@
   }
 
   &__item {
-    display: flex;
+    display: block;
     flex-direction: column; // Fixes a display issue in IE10
     margin-bottom: $condensed-whitespace;
 
     @include respond-to(em(500px)) {
       padding-left: $condensed-whitespace;
       width: percentage(1 / 2);
+    }
+
+    @include respond-to(em(700px)) {
+      display: inline-block;
     }
   }
 
