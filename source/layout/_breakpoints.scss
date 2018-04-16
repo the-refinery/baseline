@@ -1,0 +1,96 @@
+// ==========================================================================
+// Media Query Breakpoints
+// Taken from TentCSS
+// https://css.sitetent.com/tools.html#breakpoints
+// ==========================================================================
+
+// The breakpoint-min() & breakpoint-max() mixins we be rendered in EM units.
+// We'll perform the pixel to EM conversion within the mixins.
+// Please list breakpoints in pixel values.
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1600px
+) !default;
+
+// ==========================================================================
+// Grids
+// ==========================================================================
+
+// Determines which breakpoints will have their own column classses.
+//
+// e.g. .grid__column--{GRID #}--{BREAKPOINT}
+//
+// Note: The keys set in the $grid-breakpoints variable must match those found in $breakpoints.
+// Otherwise the source will not compile.
+$grid-breakpoints: (
+  sm,
+  md,
+  lg,
+  xl
+) !default;
+
+// Functions
+// ==========================================================================
+
+@function breakpoint-next($name, $points: $breakpoints, $point-names: map-keys($points)) {
+  $index: index($point-names, $name);
+  @return if($index < length($point-names), nth($point-names, $index + 1), null);
+}
+
+@function breakpoint-min($name, $points: $breakpoints) {
+  $min: map-get($points, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name, $points: $breakpoints) {
+  $next: breakpoint-next($name, $points);
+  $current: breakpoint-min($next, $points);
+  $threshold: 0.2px;
+
+  @return if($next, em(($current - $threshold)), null);
+}
+
+// Mixins
+// ==========================================================================
+
+@mixin breakpoint-min($name, $points: $breakpoints) {
+  @if map-has-key($points, $name) {
+    $min: breakpoint-min($name, $points);
+    @if $min {
+      @media (min-width: $min) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin breakpoint-max($name, $points: $breakpoints) {
+  @if map-has-key($points, $name) {
+    $max: breakpoint-max($name, $points);
+    @if $max {
+      @media (max-width: $max) {
+        @content;
+      }
+    } @else {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

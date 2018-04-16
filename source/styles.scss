@@ -12,13 +12,13 @@
 
 // LAYOUT
 // ------------------------------
-
 @import "layout/layout";
+@import "layout/breakpoints";
+@import "layout/flex";
 @import "layout/grid";
 
 // MODULES
 // ------------------------------
-
 @import "modules/buttons";
 @import "modules/embeds";
 @import "modules/forms";
@@ -30,5 +30,4 @@
 
 // STATES
 // ------------------------------
-
 @import "states/display";

@@ -1,59 +1,85 @@
-// GRID
-// --------------------------------------------
+// ==========================================================================
+// Grid
+// Taken from TentCSS
+// https://css.sitetent.com/objects.html#grid
+// ==========================================================================
 
-// Construct the grid
+.grid {
+  @extend .flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  width: 100%;
 
-.row {
-  @include clearfix;
+  &--gutterless {
+    & > .grid__column {
+      padding: 0;
+    }
+  }
 }
 
-%col-base {
-  @include respond-to(em(700px)) {
-    float: left;
-    margin-left: flex-gutter();
-    min-height: 1px; // This will keep empty columns from collapsing. -BD
+// Grid Modifiers
+// Extends .flex
+// ==========================================================================
 
-    &:first-child {
-      margin-left: 0;
+.grid--stack           { @extend .flex--stack;           }
+.grid--top             { @extend .flex--top;             }
+.grid--bottom          { @extend .flex--bottom;          }
+.grid--center          { @extend .flex--center;          }
+.grid--stretch         { @extend .flex--stretch;         }
+.grid--baseline        { @extend .flex--baseline;        }
+
+.grid--justify-center  { @extend .flex--justify-center;  }
+.grid--justify-start   { @extend .flex--justify-start;   }
+.grid--justify-end     { @extend .flex--justify-end;     }
+.grid--justify-between { @extend .flex--justify-between; }
+
+
+// Grid Columns
+// ==========================================================================
+
+
+.grid__column {
+  @extend .flex__item;
+  margin-left: 0;
+  max-width: 100%;
+  padding-left: $fg-gutter;
+  padding-right: $fg-gutter;
+  width: 100%;
+
+  // .column-* vertically aligns an individual .column
+  &--top { @extend .flex__item--top; }
+  &--bottom { @extend .flex__item--bottom; }
+  &--center { @extend .flex__item--center; }
+
+  // Explicit Column Percent Sizes
+  @for $i from 1 through $fg-max-columns {
+    $factor: 100% * ($i / $fg-max-columns);
+
+    &--#{$i} {
+      flex: 0 0 #{$factor};
+      max-width: #{$factor};
     }
+  }
 
-    &.col-centered {
-      float: none;
-      margin: 0 auto;
+  @each $point in $grid-breakpoints {
+    @include breakpoint-min($point) {
+      @for $i from 1 through $fg-max-columns {
+        $factor: 100% * ($i / $fg-max-columns);
 
-      &:first-child {
-        margin-left: auto;
+        &--#{$i}--#{$point} {
+          flex: 0 0 #{$factor};
+          max-width: #{$factor};
+        }
       }
     }
   }
 }
 
-@for $i from 1 through $fg-max-columns {
-  .col-#{$i} {
-    @extend %col-base;
+// Breakpoint changes for default selectors
+// ==========================================================================
 
-    @include respond-to(em(700px)) {
-      width: flex-grid($i);
-    }
-  }
-}
-
-@function push($amount, $firstChild) {
-  $ng: 2;
-  @if $firstChild { $ng: 1 }
-  @return flex-grid($amount) + ($ng * flex-gutter());
-}
-
-@for $i from 1 through $fg-max-columns {
-  .push-#{$i} {
-    @include respond-to(em(700px)) {
-      margin-left: push($i, false);
-    }
-
-    &:first-child {
-      @include respond-to(em(700px)) {
-        margin-left: push($i, true);
-      }
-    }
-  }
+@include breakpoint-min(sm) {
+  .grid { width: 100%; }
+  .grid__column { padding: 0 $fg-gutter; }
 }
