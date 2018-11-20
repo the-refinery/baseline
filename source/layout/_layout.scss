@@ -8,7 +8,8 @@
 .l-container {
   margin: 0 auto;
   max-width: $l-max-width;
-  width: 90%;
+  width: 100%;
+  width: calc(100% - $fg-gutter * 2);
 }
 
 .l-section {
