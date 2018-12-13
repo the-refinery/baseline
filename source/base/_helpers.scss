@@ -16,6 +16,7 @@
 
 %txt-break,
 .txt-break {
+  // sass-lint:disable no-duplicate-properties
   word-break: break-all;
   word-break: break-word;
   word-wrap: break-word;
@@ -32,9 +33,9 @@
 // Notifications
 
 @mixin notification-colors($notification-color: $default-text-color) {
+  background-color: mix($white, $notification-color, 85%);
+  border-color: mix($black, $notification-color, 20%);
   color: $notification-color;
-  background-color: mix(#fff, $notification-color, 85%);
-  border-color: mix(#000, $notification-color, 20%);
 }
 
 // Responsive embeds
@@ -48,20 +49,20 @@
 @mixin clearfix {
   &::after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
   }
 }
 
 // Em Calculator
 
-@function em($pixel, $base: 16px){
+@function em($pixel, $base: 16px) {
   @return ($pixel / $base) * 1em;
 }
 
 // REM Calculator
 
-@function rem($pixel, $base: 16px){
+@function rem($pixel, $base: 16px) {
   @return ($pixel / $base) * 1rem;
 }
 

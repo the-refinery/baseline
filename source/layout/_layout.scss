@@ -6,6 +6,7 @@
 // Main container styles
 
 .l-container {
+  // sass-lint:disable no-duplicate-properties
   margin: 0 auto;
   max-width: $l-max-width;
   width: 100%;

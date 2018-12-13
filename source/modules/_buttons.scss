@@ -2,27 +2,27 @@
 // -------------
 
 .button {
-  display: inline-block;
-  margin: 0;
-  padding: 8px 12px;
-  cursor: pointer;
-  line-height: normal;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  user-select: none;
-  white-space: nowrap;
-  color: $button-text-color;
+  appearance: none;
   background: $button-default;
   border: 1px solid $default-border-color;
   border-radius: 3px;
-  appearance: none;
+  color: $button-text-color;
+  cursor: pointer;
+  display: inline-block;
+  line-height: normal;
+  margin: 0;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 
   &:hover,
   &:focus {
-    text-decoration: none;
-    color: $button-text-color;
     background-color: darken($button-default, 10%);
+    color: $button-text-color;
+    text-decoration: none;
   }
 
   &:disabled,
@@ -45,12 +45,12 @@
 // sits next to a button.
 
 .button-pseudo {
-  display: inline-block;
-  padding: 8px 0;
-  line-height: normal;
-  vertical-align: middle;
   background: transparent;
   border: 0;
+  display: inline-block;
+  line-height: normal;
+  padding: 8px 0;
+  vertical-align: middle;
 
   .button + & {
     margin-left: $default-whitespace;

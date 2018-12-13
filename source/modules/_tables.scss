@@ -21,13 +21,14 @@
   }
 
   th {
-    text-align: left;
     font-weight: bold;
+    text-align: left;
   }
 
   &--striped {
     tbody {
       tr {
+        // sass-lint:disable nesting-depth, no-color-literals
         &:nth-child(odd) {
           background-color: #f3f3f3;
         }
@@ -38,6 +39,7 @@
   &--hover {
     tbody {
       tr {
+        // sass-lint:disable nesting-depth, no-color-literals
         &:hover {
           background-color: #eee;
         }
@@ -49,11 +51,12 @@
 // Responsive tables
 
 .table-wrapper {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: $condensed-whitespace;
-  white-space: nowrap;
+  // sass-lint:disable no-vendor-prefixes
   -webkit-overflow-scrolling: touch;
+  margin-bottom: $condensed-whitespace;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
 }
 
 .scrollable {

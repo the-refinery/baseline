@@ -5,6 +5,7 @@
 // Hide from browsers and screen readers
 
 .is-hidden {
+  // sass-lint:disable no-important
   display: none !important;
   visibility: hidden !important;
 }
@@ -12,13 +13,14 @@
 // Hide from browsers, but let screenreaders access
 
 .is-hidden-visually {
-  position: absolute !important;
-  padding: 0;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  clip: rect(1px, 1px, 1px, 1px);
+  // sass-lint:disable no-important
   border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
 }
 
 // Hide from browsers but don't remove from flow

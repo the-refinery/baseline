@@ -2,14 +2,14 @@
 // -------------------
 
 .notification {
-  padding: $default-whitespace;
-  margin-bottom: $default-whitespace;
   border: 1px solid;
   border-radius: 4px;
+  margin-bottom: $default-whitespace;
+  padding: $default-whitespace;
 
   &__title {
-    margin: 0 0 $condensed-whitespace 0;
     font-size: em(20px);
+    margin: 0 0 $condensed-whitespace;
   }
 
   &--alert {

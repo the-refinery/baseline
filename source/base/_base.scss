@@ -3,7 +3,7 @@
 // For styling elements directly
 
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,10 +11,10 @@ html {
 }
 
 body {
+  color: $default-text-color;
   font-family: $sans-serif-font;
   font-size: 100%;
   line-height: $default-leading;
-  color: $default-text-color;
 }
 
 a {
@@ -27,34 +27,35 @@ a {
 }
 
 // Base form styles
-
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
+// sass-lint:disable force-attribute-nesting, no-qualifying-elements
+input[type='color'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
 textarea {
   border: 1px solid $default-border-color;
-  padding: 6px;
   border-radius: 3px;
+  padding: 6px;
 }
+// sass-lint:enable force-attribute-nesting, no-qualifying-elements
 
 // Base table styles
 
 table {
-  max-width: 100%;
   background-color: transparent;
   border-collapse: collapse;
   border-spacing: 0;
+  max-width: 100%;
 }
 
 // Responsive media
@@ -66,4 +67,3 @@ embed {
 }
 
 img { height: auto; }
-

@@ -1,33 +1,33 @@
 // 3RD PARTY
 // ------------------------------
-@import "normalize";
+@import 'normalize';
 
 // BASE
 // ------------------------------
-@import "base/helpers";
-@import "base/settings";
-@import "base/base";
-@import "base/content";
-@import "base/utilities";
+@import 'base/helpers';
+@import 'base/settings';
+@import 'base/base';
+@import 'base/content';
+@import 'base/utilities';
 
 // LAYOUT
 // ------------------------------
-@import "layout/layout";
-@import "layout/breakpoints";
-@import "layout/flex";
-@import "layout/grid";
+@import 'layout/layout';
+@import 'layout/breakpoints';
+@import 'layout/flex';
+@import 'layout/grid';
 
 // MODULES
 // ------------------------------
-@import "modules/buttons";
-@import "modules/embeds";
-@import "modules/forms";
-@import "modules/lists";
-@import "modules/media";
-@import "modules/notifications";
-@import "modules/tables";
-@import "modules/tiles";
+@import 'modules/buttons';
+@import 'modules/embeds';
+@import 'modules/forms';
+@import 'modules/lists';
+@import 'modules/media';
+@import 'modules/notifications';
+@import 'modules/tables';
+@import 'modules/tiles';
 
 // STATES
 // ------------------------------
-@import "states/display";
+@import 'states/display';

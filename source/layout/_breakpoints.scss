@@ -51,7 +51,7 @@ $grid-breakpoints: (
 @function breakpoint-max($name, $points: $breakpoints) {
   $next: breakpoint-next($name, $points);
   $current: breakpoint-min($next, $points);
-  $threshold: 0.2px;
+  $threshold: .2px;
 
   @return if($next, em(($current - $threshold)), null);
 }
@@ -60,6 +60,7 @@ $grid-breakpoints: (
 // ==========================================================================
 
 @mixin breakpoint-min($name, $points: $breakpoints) {
+  // sass-lint:disable no-warn
   @if map-has-key($points, $name) {
     $min: breakpoint-min($name, $points);
     @if $min {
@@ -69,15 +70,14 @@ $grid-breakpoints: (
     } @else {
       @content;
     }
-  }
-
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
+  } @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$name}`. '
+    + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
 
 @mixin breakpoint-max($name, $points: $breakpoints) {
+  // sass-lint:disable no-warn
   @if map-has-key($points, $name) {
     $max: breakpoint-max($name, $points);
     @if $max {
@@ -87,10 +87,8 @@ $grid-breakpoints: (
     } @else {
       @content;
     }
-  }
-
-  @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
+  } @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$name}`. '
+    + 'Please make sure it is defined in `$breakpoints` map.';
   }
 }
