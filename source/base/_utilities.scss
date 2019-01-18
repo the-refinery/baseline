@@ -55,3 +55,13 @@
 .mlm, .mhm, .mam { margin-left: $default-whitespace !important; }
 .mll, .mhl, .mal { margin-left: 2 * $default-whitespace !important; }
 // sass-lint:enable single-line-per-selector, no-important
+
+// Turn off animations if use has reduced motion on
+// sass-lint:disable no-important
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+// sass-lint:enable no-important
